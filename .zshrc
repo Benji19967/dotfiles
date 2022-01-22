@@ -11,9 +11,14 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+CODE_REPO="~/programming"
+
 # Aliases
 alias rc="vim ~/.zshrc"
 alias src="source ~/.zshrc"
 alias gd="git diff"
 alias s="git status"
 alias c="git commit -am "
+alias b="git branch"
+alias notes="cd $CODE_REPO/notes"
+alias dot="cd $CODE_REPO/dotfiles"
