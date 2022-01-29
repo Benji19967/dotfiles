@@ -15,7 +15,8 @@ CODE_REPO="~/programming"
 
 # Aliases
 alias rc="vim ~/.zshrc"
-alias rcp="vim ~/.zprofile"
+alias prc="vim ~/.zprofile"
+alias vrc="vim ~/.vimrc"
 alias src="source ~/.zshrc"
 alias srcp="source ~/.zprofile"
 alias gd="git diff"
