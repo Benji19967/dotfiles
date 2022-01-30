@@ -14,10 +14,10 @@ source $ZSH/oh-my-zsh.sh
 CODE_REPO="~/programming"
 
 # Aliases
-alias rc="vim ~/.zshrc"
-alias prc="vim ~/.zprofile"
-alias vrc="vim ~/.vimrc"
-alias nrc="vim ~/.config/nvim/init.vim"
+alias rc="nvim ~/.zshrc"
+alias prc="nvim ~/.zprofile"
+alias vrc="nvim ~/.vimrc"
+alias nrc="nvim ~/.config/nvim/init.vim"
 alias src="source ~/.zshrc"
 alias srcp="source ~/.zprofile"
 alias gd="git diff"
