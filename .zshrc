@@ -6,14 +6,14 @@ export ZSH="/Users/benjaminlabrecque/.oh-my-zsh"
 
 plugins=(
     git
-    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
 
-CODE_REPO="~/programming"
+CODE_REPO="~/apps/home/labrecqb"
 
 # Aliases
+alias ap="cd $CODE_REPO"
 alias rc="nvim ~/.zshrc"
 alias prc="nvim ~/.zprofile"
 alias vrc="nvim ~/.vimrc"
@@ -27,3 +27,9 @@ alias b="git branch"
 alias notes="cd $CODE_REPO/notes"
 alias dot="cd $CODE_REPO/dotfiles"
 alias cl="clear"
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -18,20 +18,26 @@ set signcolumn=yes
 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
+Plug 'overcache/NeoSolarized'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+" Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+" Plug 'ms-jpq/coq.artifacts', {'branch': 'Artifacts'}
+" Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+Plug 'jose-elias-alvarez/null-ls.nvim'
 call plug#end()
 
 set completeopt=menuone,noinsert,noselect
-lua require('lspconfig').pylsp.setup{ on_attach=require'coq'.on_attach }
+" lua require('lspconfig').pylsp.setup{ on_attach=require'coq'.on_attach }
+" lua require('null-ls').setup({ sources =  { require('null-ls').builtins.formatting.black, }, })
 set termguicolors
 colorscheme gruvbox
 
-let mapleader = " "
+" Remap
 
+" Terminal remap
+tnoremap <Esc> <C-\><C-n>
+let mapleader = " "
