@@ -1,1 +1,3 @@
-require "benji19967.keymaps"
+require "benji19967"
+
+print("Hello from lua")
