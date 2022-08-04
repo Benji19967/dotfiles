@@ -8,5 +8,3 @@ return {
     }
 	},
 }
-Footer
-
