@@ -13,4 +13,11 @@ return require('packer').startup(function(use)
   --use 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   use 'neovim/nvim-lspconfig'
   use 'jose-elias-alvarez/null-ls.nvim'
+
+  -- cmp plugins
+  use 'hrsh7th/nvim-cmp'
+
+  -- snippets
+  use 'L3MON4D3/LuaSnip' -- snippet engine
+  use 'rafamadriz/friendly-snippets' -- bunch of snippets to use
 end)
