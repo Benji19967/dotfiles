@@ -16,6 +16,10 @@ return require('packer').startup(function(use)
 
   -- cmp plugins
   use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'saadparwaiz1/cmp_luasnip'
 
   -- snippets
   use 'L3MON4D3/LuaSnip' -- snippet engine
