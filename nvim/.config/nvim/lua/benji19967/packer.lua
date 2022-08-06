@@ -37,4 +37,7 @@ return require('packer').startup(function(use)
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+
 end)
