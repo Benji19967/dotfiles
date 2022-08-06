@@ -10,8 +10,9 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-fzy-native.nvim'
-  use 'nvim-treesitter/nvim-treesitter'
   use 'jose-elias-alvarez/null-ls.nvim'
+  use 'windwp/nvim-autopairs'
+  use "numToStr/Comment.nvim" -- Easily comment stuff
 
   -- cmp plugins
   use 'hrsh7th/nvim-cmp'
@@ -28,4 +29,12 @@ return require('packer').startup(function(use)
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
 end)
