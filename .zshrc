@@ -26,7 +26,7 @@ alias s="git status"
 alias c="git commit -am "
 alias b="git branch"
 alias notes="cd $CODE_REPO/notes"
-alias dot="cd $CODE_REPO/dotfiles"
+alias dot="cd $CODE_REPO/dotfiles/nvim/.config/nvim"
 alias cl="clear"
 
 autoload -Uz compinit

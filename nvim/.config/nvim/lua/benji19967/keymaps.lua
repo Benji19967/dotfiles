@@ -62,6 +62,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
 
 -- NetRW
 keymap("n", "<leader>t", "<cmd>Ex<cr>", opts)

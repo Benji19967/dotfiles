@@ -10,15 +10,13 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-fzy-native.nvim'
-  --use 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  use 'neovim/nvim-lspconfig'
+  use 'nvim-treesitter/nvim-treesitter'
   use 'jose-elias-alvarez/null-ls.nvim'
 
   -- cmp plugins
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
-  use 'saadparwaiz1/cmp_luasnip'
   use 'saadparwaiz1/cmp_luasnip'
   use 'hrsh7th/cmp-nvim-lsp'
 
