@@ -66,3 +66,6 @@ keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
 
 -- NetRW
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
+
+-- Format
+keymap("n", "<leader>f", ":lua vim.lsp.buf.formatting_sync()<cr>", opts)

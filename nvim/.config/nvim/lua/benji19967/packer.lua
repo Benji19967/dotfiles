@@ -10,7 +10,6 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-fzy-native.nvim'
-  use 'jose-elias-alvarez/null-ls.nvim'
   use 'windwp/nvim-autopairs'
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use 'kyazdani42/nvim-web-devicons'
@@ -31,6 +30,7 @@ return require('packer').startup(function(use)
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   -- Treesitter
   use {

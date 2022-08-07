@@ -6,3 +6,4 @@ end
 
 require("benji19967.lsp.lsp-installer")
 require("benji19967.lsp.handlers").setup()
+require("benji19967.lsp.null-ls")
