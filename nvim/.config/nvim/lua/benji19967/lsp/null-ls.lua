@@ -15,6 +15,6 @@ null_ls.setup {
     formatting.black.with { extra_args = { "--fast" } },
     -- formatting.yapf,
     formatting.stylua,
-    diagnostics.mypy,
+    diagnostics.flake8,
   },
 }
