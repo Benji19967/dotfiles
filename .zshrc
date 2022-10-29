@@ -20,13 +20,12 @@ source $ZSH/oh-my-zsh.sh
 
 CODE_REPO="${HOME}/apps/home/labrecqb"
 
-
 # Aliases
 alias ap="cd $CODE_REPO"
 alias rc="vim ~/.zshrc"
 alias prc="vim ~/.zprofile"
 alias vrc="vim ~/.vimrc"
-alias nrc="vim ~/.config/nvim/init.vim"
+alias nrc="vim ~/.config/nvim/init.vim" # symlinked
 alias vim="nvim"
 alias src="source ~/.zshrc"
 alias srcp="source ~/.zprofile"
