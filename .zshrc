@@ -25,6 +25,7 @@ alias ap="cd $CODE_REPO"
 alias rc="vim ~/.zshrc"
 alias prc="vim ~/.zprofile"
 alias vrc="vim ~/.vimrc"
+alias trc="vim ~/.tmux.conf"
 alias nrc="vim ~/.config/nvim/init.vim" # symlinked
 alias vim="nvim"
 alias src="source ~/.zshrc"

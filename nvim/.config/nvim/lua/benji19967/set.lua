@@ -15,6 +15,6 @@ vim.opt.undodir = "~/.vim/undodir"
 vim.opt.undofile = true
 vim.opt.incsearch = true
 vim.opt.scrolloff = 8
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "88"
 vim.opt.termguicolors = true
 -- vim.opt.cursorline = true
