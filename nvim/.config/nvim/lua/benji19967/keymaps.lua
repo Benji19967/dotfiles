@@ -65,6 +65,7 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='/Users/benjaminlabrecque/apps/home/labrecqb/notes'})<cr>", opts)
 keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='/Users/benjaminlabrecque/apps/home/labrecqb/notes'})<cr>", opts)
+keymap("n", "<leader>fl", ":lua require('telescope.builtin').find_files({cwd='/Users/benjaminlabrecque/apps/home/labrecqb/dotfiles/nvim/.config/nvim'})<cr>", opts)
 keymap("n", "<leader>bb", ":lua require('telescope.builtin').buffers({})<cr>", opts)
 
 -- NetRW
