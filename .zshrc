@@ -25,6 +25,7 @@ tmux source ~/.tmux.conf
 
 # Aliases
 alias ap="cd $CODE_REPO"
+alias v="vim ."
 alias rc="vim ~/.zshrc"
 alias prc="vim ~/.zprofile"
 alias vrc="vim ~/.vimrc"
