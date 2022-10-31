@@ -63,6 +63,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='/Users/benjaminlabrecque/apps/home/labrecqb/notes'})<cr>", opts)
 
 -- NetRW
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
