@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use 'kyazdani42/nvim-web-devicons'
   use({ "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" })
+  use {"ellisonleao/glow.nvim"}
 
   -- cmp plugins
   use 'hrsh7th/nvim-cmp'

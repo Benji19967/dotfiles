@@ -20,6 +20,9 @@ source $ZSH/oh-my-zsh.sh
 
 CODE_REPO="${HOME}/apps/home/labrecqb"
 
+# Source tmux
+tmux source ~/.tmux.conf
+
 # Aliases
 alias ap="cd $CODE_REPO"
 alias rc="vim ~/.zshrc"
@@ -38,6 +41,10 @@ alias notes="cd $CODE_REPO/notes"
 alias dot="cd $CODE_REPO/dotfiles/nvim/.config/nvim"
 alias cl="clear"
 alias python="python3"
+
+# Path Aliases
+alias nlp="cd $CODE_REPO/nlp"
+alias ner="cd $CODE_REPO/nlp/ner"
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
