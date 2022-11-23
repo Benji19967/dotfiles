@@ -13,8 +13,9 @@ null_ls.setup {
   sources = {
     formatting.prettier.with { extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } },
     formatting.black.with { extra_args = { "--fast" } },
+    formatting.isort.with { extra_args = { "--profile=black" } },
     -- formatting.yapf,
     formatting.stylua,
-    diagnostics.flake8,
+    diagnostics.flake8.with { extra_args = { "--max-line-length=999" } },
   },
 }
