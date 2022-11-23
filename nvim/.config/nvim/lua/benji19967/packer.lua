@@ -1,57 +1,70 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+    local fn = vim.fn
+    local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+    if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+        vim.cmd [[packadd packer.nvim]]
+        return true
+    end
+    return false
 end
 
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  use 'morhetz/gruvbox'
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
-  use 'nvim-telescope/telescope-fzy-native.nvim'
-  use 'windwp/nvim-autopairs'
-  use "numToStr/Comment.nvim" -- Easily comment stuff
-  use 'kyazdani42/nvim-web-devicons'
-  use({ "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" })
-  use {"ellisonleao/glow.nvim"}
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+    use 'morhetz/gruvbox'
+    use 'nvim-lua/plenary.nvim'
+    use 'nvim-telescope/telescope.nvim'
+    use 'nvim-telescope/telescope-fzy-native.nvim'
+    use 'windwp/nvim-autopairs'
+    use "numToStr/Comment.nvim" -- Easily comment stuff
+    use 'kyazdani42/nvim-web-devicons'
+    use({ "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" })
+    use { "ellisonleao/glow.nvim" }
 
-  -- cmp plugins
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-nvim-lua'
+    -- cmp plugins
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-nvim-lua'
 
-  -- snippets
-  use 'L3MON4D3/LuaSnip' -- snippet engine
-  use 'rafamadriz/friendly-snippets' -- bunch of snippets to use
+    -- snippets
+    use 'L3MON4D3/LuaSnip' -- snippet engine
+    use 'rafamadriz/friendly-snippets' -- bunch of snippets to use
 
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use 'williamboman/mason.nvim'
-  use  'williamboman/mason-lspconfig.nvim'
+    -- LSP
+    use 'neovim/nvim-lspconfig'
+    use 'jose-elias-alvarez/null-ls.nvim'
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
 
-  -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
-  use 'JoosepAlviste/nvim-ts-context-commentstring'
+    -- Treesitter
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate",
+    }
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
 
-  -- Git
-  use "lewis6991/gitsigns.nvim"
+    -- Git
+    use "lewis6991/gitsigns.nvim"
+
+    -- Trouble
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
 
 end)
