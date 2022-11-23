@@ -60,12 +60,16 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- Terminal --
+keymap("t", "<ESC>", "<C-\\><C-n>", opts)
+
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='/Users/benjaminlabrecque/apps/home/labrecqb/notes'})<cr>", opts)
-keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='/Users/benjaminlabrecque/apps/home/labrecqb/notes'})<cr>", opts)
-keymap("n", "<leader>fl", ":lua require('telescope.builtin').find_files({cwd='/Users/benjaminlabrecque/apps/home/labrecqb/dotfiles/nvim/.config/nvim'})<cr>", opts)
+keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='/apps/home/labrecqb/benjamin/notes'})<cr>", opts)
+keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='/apps/home/labrecqb/benjamin/notes'})<cr>", opts)
+keymap("n", "<leader>fl", ":lua require('telescope.builtin').find_files({cwd='/lxhome/labrecqb/dotfiles/nvim/.config/nvim'})<cr>", opts)
+keymap("n", "<leader>fd", ":lua require('telescope.builtin').git_files({cwd='/apps/home/labrecqb/docbox'})<cr>", opts)
 keymap("n", "<leader>bb", ":lua require('telescope.builtin').buffers({})<cr>", opts)
 
 -- NetRW
