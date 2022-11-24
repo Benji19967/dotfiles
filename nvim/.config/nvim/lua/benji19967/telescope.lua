@@ -5,6 +5,9 @@ end
 
 local actions = require "telescope.actions"
 
+-- Use harpoon through Telescope
+require("telescope").load_extension('harpoon')
+
 telescope.setup {
   defaults = {
 

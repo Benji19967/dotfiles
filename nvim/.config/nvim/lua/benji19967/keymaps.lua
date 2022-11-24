@@ -79,3 +79,11 @@ keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Format
 keymap("n", "<leader>f", ":lua vim.lsp.buf.formatting_sync()<cr>", opts)
+
+-- Harpoon
+keymap("n", "<leader>a", ":lua require('harpoon.mark').add_file()<cr>", opts)
+keymap("n", "<C-p>", "<cmd>Telescope harpoon marks<cr>", opts)
+keymap("n", "<C-h>", ":lua require('harpoon.ui').nav_file(1)<cr>", opts)
+keymap("n", "<C-j>", ":lua require('harpoon.ui').nav_file(2)<cr>", opts)
+keymap("n", "<C-k>", ":lua require('harpoon.ui').nav_file(3)<cr>", opts)
+keymap("n", "<C-l>", ":lua require('harpoon.ui').nav_file(4)<cr>", opts)
