@@ -66,6 +66,7 @@ keymap("t", "<ESC>", "<C-\\><C-n>", opts)
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>gf", ":lua require('telescope.builtin').git_files({ path_display = { 'truncate' } })<cr>", opts)
 keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='/apps/home/labrecqb/benjamin/notes'})<cr>", opts)
 keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='/apps/home/labrecqb/benjamin/notes'})<cr>", opts)
 keymap("n", "<leader>fl", ":lua require('telescope.builtin').find_files({cwd='/lxhome/labrecqb/dotfiles/nvim/.config/nvim'})<cr>", opts)
