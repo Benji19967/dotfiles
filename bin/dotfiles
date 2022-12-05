@@ -5,3 +5,11 @@ set -e
 # Development environment setup
 
 echo "Setting up development environment"
+
+APPS_HOME=$HOME/apps/home/labrecqb
+
+cd 
+ln -sf $APPS_HOME/dotfiles/.zshrc .zshrc
+ln -sf $APPS_HOME/dotfiles/.zprofile .zprofile
+ln -sf $APPS_HOME/dotfiles/.vimrc .vimrc
+ln -sf $APPS_HOME/dotfiles/.gitignore .gitignore
