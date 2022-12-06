@@ -28,8 +28,8 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertial resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -40,7 +40,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
@@ -67,9 +67,12 @@ keymap("t", "<ESC>", "<C-\\><C-n>", opts)
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>gf", ":lua require('telescope.builtin').git_files({ path_display = { 'truncate' } })<cr>", opts)
-keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='/apps/home/labrecqb/benjamin/notes'})<cr>", opts)
-keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='/apps/home/labrecqb/benjamin/notes'})<cr>", opts)
-keymap("n", "<leader>fl", ":lua require('telescope.builtin').find_files({cwd='/lxhome/labrecqb/dotfiles/nvim/.config/nvim'})<cr>", opts)
+keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='/apps/home/labrecqb/benjamin/notes'})<cr>",
+    opts)
+keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='/apps/home/labrecqb/benjamin/notes'})<cr>"
+    , opts)
+keymap("n", "<leader>fl",
+    ":lua require('telescope.builtin').find_files({cwd='/lxhome/labrecqb/dotfiles/nvim/.config/nvim'})<cr>", opts)
 keymap("n", "<leader>fd", ":lua require('telescope.builtin').git_files({cwd='/apps/home/labrecqb/docbox'})<cr>", opts)
 keymap("n", "<leader>gd", ":lua require('telescope.builtin').live_grep({cwd='/apps/home/labrecqb/docbox'})<cr>", opts)
 keymap("n", "<leader>dd", ":lua require('telescope.builtin').lsp_references()<cr>", opts)
