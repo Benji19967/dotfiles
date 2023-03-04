@@ -42,8 +42,9 @@ alias notes="cd $CODE_REPO/notes"
 alias dot="cd $CODE_REPO/dotfiles/nvim/.config/nvim"
 alias lua="cd $CODE_REPO/dotfiles/nvim/.config/nvim/lua/benji19967"
 alias cl="clear"
-alias ll="ll -a"
-alias python="python3"
+alias ll="ls -l"
+alias lla="ls -la"
+alias poetry=".poetry_venv/bin/poetry"
 
 # Path Aliases
 alias nlp="cd $CODE_REPO/nlp"

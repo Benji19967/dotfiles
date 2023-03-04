@@ -16,4 +16,5 @@ ln -sf $APPS_HOME/dotfiles/.zprofile .zprofile
 ln -sf $APPS_HOME/dotfiles/.vimrc .vimrc
 ln -sf $APPS_HOME/dotfiles/.gitignore .gitignore
 ln -sf $APPS_HOME/dotfiles/.tmux.conf .tmux.conf
+ln -sf $APPS_HOME/dotfiles/nvim/.config/nvim .config/nvim
 echo "Done setting up symlinks"
