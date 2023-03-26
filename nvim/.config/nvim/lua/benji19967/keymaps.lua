@@ -39,6 +39,10 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
+-- Zoom in and out of buffer
+keymap("n", "Zz", "<C-w>_ <C-w>|", opts)
+keymap("n", "Zo", "<C-w>=", opts)
+
 -- Insert --
 -- Press jk fast to exit insert mode 
 keymap("i", "jk", "<ESC>", opts)
