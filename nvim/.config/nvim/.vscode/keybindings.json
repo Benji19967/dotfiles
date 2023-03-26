@@ -1,0 +1,28 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.files.save"
+    },
+    {
+        "key": "cmd+s",
+        "command": "-workbench.action.files.save"
+    },
+    // START -- Toggle between editor and Terminal
+    {
+        "key": "ctrl+alt+m",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+alt+m",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminalFocus"
+    }
+    // END -- Toggle between editor and Terminal
+]
