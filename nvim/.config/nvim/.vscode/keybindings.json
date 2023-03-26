@@ -9,6 +9,9 @@
         "command": "-workbench.action.files.save"
     },
     // START -- Toggle between editor and Terminal
+    // https://stackoverflow.com/questions/48511956/toggle-between-fullscreen-editor-and-terminal-in-vs-code
+    // Swipe terminal window all the way down when in 
+    // editor mode
     {
         "key": "ctrl+alt+m",
         "command": "workbench.action.toggleMaximizedPanel",
