@@ -28,4 +28,12 @@
         "when": "terminalFocus"
     }
     // END -- Toggle between editor and Terminal
+    
+    // --- START -- Project Manager
+    // shift+alt+p does not work in the Terminal
+    {
+      "key": "ctrl+alt+p",
+      "command": "projectManager.listProjects",
+    },
+    // --- END -- Project Manager
 ]
