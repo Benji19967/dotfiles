@@ -26,7 +26,7 @@
         "key": "ctrl+alt+m",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminalFocus"
-    }
+    },
     // END -- Toggle between editor and Terminal
     
     // --- START -- Project Manager
