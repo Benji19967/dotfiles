@@ -54,4 +54,9 @@ return require('packer').startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+  -- Vimux
+  -- Docs: https://raw.githubusercontent.com/preservim/vimux/master/doc/vimux.txt
+  use "preservim/vimux"
+
+
 end)
