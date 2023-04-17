@@ -63,4 +63,7 @@ return require('packer').startup(function(use)
 
   -- Colorschemes
   use "folke/tokyonight.nvim"
+
+  -- Markdown preview in browser
+  use "iamcco/markdown-preview.nvim"
 end)
