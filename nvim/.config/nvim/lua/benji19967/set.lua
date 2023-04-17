@@ -18,3 +18,4 @@ vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "88"
 vim.opt.termguicolors = true
 -- vim.opt.cursorline = true
+vim.g.slime_target = 'tmux'

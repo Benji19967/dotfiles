@@ -58,5 +58,9 @@ return require('packer').startup(function(use)
   -- Docs: https://raw.githubusercontent.com/preservim/vimux/master/doc/vimux.txt
   use "preservim/vimux"
 
+  -- Vim-slime
+  use "jpalardy/vim-slime"
 
+  -- Colorschemes
+  use "folke/tokyonight.nvim"
 end)
