@@ -43,6 +43,9 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("n", "Zz", "<C-w>_ <C-w>|", opts)
 keymap("n", "Zo", "<C-w>=", opts)
 
+-- Open last buffer
+keymap("n", "<C-Tab>", ":bprevious<CR>", opts)
+
 -- Insert --
 -- Press jk fast to exit insert mode 
 keymap("i", "jk", "<ESC>", opts)
