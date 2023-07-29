@@ -65,4 +65,10 @@ nvim_tree.setup {
       },
     },
   },
+  actions = {
+    open_file = {
+        -- Make sure tree stays closed when opening a new file
+        quit_on_open = true,
+    }
+  }
 }
