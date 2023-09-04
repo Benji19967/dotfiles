@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1) Go to directory where you want to create repo
-# 2) ./create_repo.sh <repo_name> # this will create a directory <repo_name>
+# 2) `create_repo.sh <repo_name>` # this will create a directory <repo_name>
 
 set -x
 
