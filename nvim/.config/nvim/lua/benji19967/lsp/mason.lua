@@ -1,3 +1,5 @@
+-- Reference: https://github.com/ChristianChiarulli/nvim/blob/master/lua/user/lsp/mason.lua
+
 local status_ok, mason = pcall(require, "mason")
 if not status_ok then
   return
