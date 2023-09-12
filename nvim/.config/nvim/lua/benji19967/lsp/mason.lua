@@ -12,6 +12,7 @@ local servers = {
   "pyright",
   "jsonls",
   "lua_ls",
+  "rust_analyzer", -- Just adding this line and restarting Neovim added LSP for Rust
 }
 
 local settings = {
