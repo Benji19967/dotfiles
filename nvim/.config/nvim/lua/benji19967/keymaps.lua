@@ -76,7 +76,7 @@ keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
 keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
 keymap("n", "<leader>fl", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/dotfiles/nvim/.config/nvim'})<cr>", opts)
-keymap("n", "<leader>bb", ":lua require('telescope.builtin').buffers({})<cr>", opts)
+keymap("n", "<leader>w", ":lua require('telescope.builtin').buffers({})<cr>", opts)
 
 -- NetRW
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
