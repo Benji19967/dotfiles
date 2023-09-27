@@ -20,7 +20,9 @@ vim.g.maplocalleader = " "
 
 -- <A-j> is Option + j
 
--- Normal --
+-- ##############
+-- ### Normal ###
+-- ##############
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -48,11 +50,19 @@ keymap("n", "Zo", "<C-w>=", opts)
 -- Open last buffer
 keymap("n", "<C-Tab>", ":bprevious<CR>", opts)
 
--- Insert --
+-- Comment
+-- This works for Ctrl-_ and Ctrl-/
+keymap("n", "<C-_>", ":normal gcc<CR>", opts)
+
+-- ##############
+-- ### Insert ###
+-- ##############
 -- Press jk fast to exit insert mode 
 -- keymap("i", "jk", "<ESC>", opts)
 
--- Visual --
+-- ##############
+-- ### Visual ###
+-- ##############
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -62,14 +72,22 @@ keymap("v", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("v", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("v", "p", '"_dP', opts)
 
--- Visual Block --
+-- Comment
+-- This works for Ctrl-_ and Ctrl-/
+keymap("v", "<C-_>", ":normal gcc<CR>", opts)
+
+-- ####################
+-- ### Visual Block ###
+-- ####################
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Terminal --
+-- ################
+-- ### Terminal ###
+-- ################
 keymap("t", "<ESC>", "<C-\\><C-n>", opts)
 
 -- Telescope
