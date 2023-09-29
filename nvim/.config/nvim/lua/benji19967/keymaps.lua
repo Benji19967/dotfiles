@@ -91,15 +91,17 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("t", "<ESC>", "<C-\\><C-n>", opts)
 
 -- Telescope
+keymap("n", "<leader>pp", ":vim ~/apps/home/labrecqb<cr>", opts)
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>gf", "<cmd>Telescope git_files<cr>", opts)
 keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
 keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
-keymap("n", "<leader>fl", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/dotfiles/nvim/.config/nvim'})<cr>", opts)
+keymap("n", "<leader>fd", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/dotfiles/nvim/.config/nvim'})<cr>", opts)
 keymap("n", "<leader>w", ":lua require('telescope.builtin').buffers({})<cr>", opts)
 
 -- NetRW
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Format
-keymap("n", "<leader>f", ":lua vim.lsp.buf.formatting_sync()<cr>", opts)
+keymap("n", "<leader>f", ":lua vim.lsp.buf.format()<cr>", opts)

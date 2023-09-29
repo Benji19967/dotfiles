@@ -43,9 +43,11 @@ alias notes="vim $CODE_REPO/notes"
 alias notesdir="cd $CODE_REPO/notes"
 alias todo="vim $CODE_REPO/notes/todo.md"
 alias cl="clear"
-alias ll="ls -l"
-alias lla="ls -la"
+alias ls="exa -l"
+alias ll="exa -l"
+alias lla="exa -la"
 alias poetry=".poetry_venv/bin/poetry"
+alias p='fzf_find_edit'
 
 # Path Aliases
 alias ap="cd $CODE_REPO"
@@ -73,3 +75,19 @@ function knit()
 {
     R -e "rmarkdown::render('$1')"
 }
+
+function double_file()
+{
+    filename=$1
+    x=$(cat $filename) && echo "$x" >> $filename
+}
+
+# https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html
+function fzf_find_edit() 
+{
+    local dir=$(ls -1 | fzf)
+    if [[ -n "$dir" ]]; then
+        vim "$dir"
+    fi
+}
+
