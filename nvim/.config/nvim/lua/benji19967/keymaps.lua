@@ -57,7 +57,7 @@ keymap("n", "<C-_>", ":normal gcc<CR>", opts)
 -- ##############
 -- ### Insert ###
 -- ##############
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 -- keymap("i", "jk", "<ESC>", opts)
 
 -- ##############
@@ -91,17 +91,20 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("t", "<ESC>", "<C-\\><C-n>", opts)
 
 -- Telescope
-keymap("n", "<leader>pp", ":vim ~/apps/home/labrecqb<cr>", opts)
+--[[ keymap("n", "<leader>pp", ":vim ~/apps/home/labrecqb<cr>", opts) ]]
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>gf", "<cmd>Telescope git_files<cr>", opts)
 keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
 keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
-keymap("n", "<leader>fd", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/dotfiles/nvim/.config/nvim'})<cr>", opts)
+keymap("n", "<leader>fd",
+    ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/dotfiles', hidden=true})<cr>", opts)
 keymap("n", "<leader>w", ":lua require('telescope.builtin').buffers({})<cr>", opts)
+keymap("n", "<leader>s", ":lua require('telescope.builtin').lsp_document_symbols({})<cr>", opts)
+keymap("n", "<leader>o", ":lua require('telescope.builtin').oldfiles({})<cr>", opts)
 
 -- NetRW
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Format
-keymap("n", "<leader>f", ":lua vim.lsp.buf.format()<cr>", opts)
+keymap("n", "<leader>d", ":lua vim.lsp.buf.format({async=true})<cr>", opts)

@@ -47,6 +47,7 @@ alias ls="exa -l"
 alias ll="exa -l"
 alias lla="exa -la"
 alias poetry=".poetry_venv/bin/poetry"
+alias gpoetry="$HOME/.local/bin/poetry"
 alias p='fzf_find_edit'
 
 # Path Aliases
