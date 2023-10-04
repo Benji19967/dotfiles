@@ -6,5 +6,5 @@ require('glow').setup({
   border = "shadow", -- floating window border config
   style = "dark", -- filled automatically with your current editor background, you can override using glow json style
   pager = false,
-  width = 80,
+  width = 2000,
 })
