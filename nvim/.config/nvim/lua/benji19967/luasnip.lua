@@ -71,6 +71,10 @@ vim.keymap.set("i", "<c-l>", function()
   end
 end)
 
+require('luasnip.loaders.from_lua').lazy_load({
+    paths = "~/apps/home/labrecqb/dotfiles/nvim/.config/nvim/lua/benji19967/snips",
+})
+
 vim.keymap.set("i", "<c-u>", require "luasnip.extras.select_choice")
 
 -- shorcut to source my luasnips file again, which will reload my snippets
