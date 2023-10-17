@@ -7,6 +7,7 @@ local actions = require "telescope.actions"
 
 telescope.setup {
   defaults = {
+    layout_strategy = "vertical",
 
     prompt_prefix = " ",
     selection_caret = " ",
