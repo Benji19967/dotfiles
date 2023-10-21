@@ -69,4 +69,7 @@ return require('packer').startup(function(use)
 
     -- Quickly navigate to projects
     use "ahmedkhalf/project.nvim"
+
+    -- Multi-cursor
+    use 'mg979/vim-visual-multi'
 end)
