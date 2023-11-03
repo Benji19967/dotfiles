@@ -16,7 +16,6 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use 'morhetz/gruvbox'
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-fzy-native.nvim'
@@ -62,6 +61,7 @@ return require('packer').startup(function(use)
     use "jpalardy/vim-slime"
 
     -- Colorschemes
+    use 'morhetz/gruvbox'
     use "folke/tokyonight.nvim"
 
     -- Markdown preview in browser
