@@ -15,6 +15,9 @@ plugins=(
     git
 )
 
+# Unset ability to cd into a dir by just typing the dir name without `cd`
+unsetopt autocd
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/benjaminlabrecque/.oh-my-zsh"
 
