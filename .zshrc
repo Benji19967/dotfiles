@@ -48,7 +48,6 @@ alias ll="exa -l"
 alias lla="exa -la"
 alias poetry=".poetry_venv/bin/poetry"
 alias gpoetry="$HOME/.local/bin/poetry"
-alias p='fzf_find_edit'
 
 # Path Aliases
 alias ap="cd $CODE_REPO"
@@ -88,7 +87,8 @@ function fzf_find_edit()
 {
     local dir=$(ls -1 | fzf);
     if [[ -n "$dir" ]]; then
-        vim "$dir"
+        cd "$dir"
+        vim .
     fi
 }
 
