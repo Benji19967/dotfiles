@@ -92,16 +92,24 @@ keymap("t", "<ESC>", "<C-\\><C-n>", opts)
 
 -- Telescope
 --[[ keymap("n", "<leader>pp", ":vim ~/apps/home/labrecqb<cr>", opts) ]]
+
+-- Telescope -- files
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>rg", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>gf", "<cmd>Telescope git_files<cr>", opts)
-keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
-keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
 keymap("n", "<leader>fd",
     ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/dotfiles', hidden=true})<cr>", opts)
+keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope git_files<cr>", opts)
+keymap("n", "<leader>o", ":lua require('telescope.builtin').oldfiles({})<cr>", opts)
+
+-- Telescope -- grep
+keymap("n", "<leader>gg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
+keymap("n", "<leader>gd",
+    ":lua require('telescope.builtin').live_grep({vimgrep_arguments = { 'rg', '--color=never', '--hidden', '--with-filename', '--line-number', '--column', '--smart-case' }})<cr>"
+    , opts)
+
 keymap("n", "<leader>w", ":lua require('telescope.builtin').buffers({})<cr>", opts)
 keymap("n", "<leader>s", ":lua require('telescope.builtin').lsp_document_symbols({})<cr>", opts)
-keymap("n", "<leader>o", ":lua require('telescope.builtin').oldfiles({})<cr>", opts)
 
 -- NetRW
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
