@@ -93,7 +93,7 @@ keymap("t", "<ESC>", "<C-\\><C-n>", opts)
 -- Telescope
 --[[ keymap("n", "<leader>pp", ":vim ~/apps/home/labrecqb<cr>", opts) ]]
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>rg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>gf", "<cmd>Telescope git_files<cr>", opts)
 keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
 keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
