@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lua'
 
     -- snippets
-    use 'L3MON4D3/LuaSnip' -- snippet engine
+    use 'L3MON4D3/LuaSnip'             -- snippet engine
     use 'rafamadriz/friendly-snippets' -- bunch of snippets to use
 
     -- LSP
@@ -72,4 +72,7 @@ return require('packer').startup(function(use)
 
     -- Multi-cursor
     use 'mg979/vim-visual-multi'
+
+    -- Jupyter Notebooks
+    use 'luk400/vim-jukit'
 end)
