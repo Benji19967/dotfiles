@@ -98,12 +98,16 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>fd",
     ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/dotfiles', hidden=true})<cr>", opts)
 keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
+keymap("n", "<leader>fp", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb'})<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope git_files<cr>", opts)
 keymap("n", "<leader>o", ":lua require('telescope.builtin').oldfiles({})<cr>", opts)
 
 -- Telescope -- grep
 keymap("n", "<leader>gg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
+keymap("n", "<leader>gp", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb'})<cr>", opts)
+keymap("n", "<leader>gr", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/rust_sandbox'})<cr>",
+    opts)
 keymap("n", "<leader>gd",
     ":lua require('telescope.builtin').live_grep({vimgrep_arguments = { 'rg', '--color=never', '--hidden', '--with-filename', '--line-number', '--column', '--smart-case' }})<cr>"
     , opts)
@@ -116,3 +120,6 @@ keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Format
 keymap("n", "<leader>d", ":lua vim.lsp.buf.format({async=true})<cr>", opts)
+
+-- Markdown
+keymap("n", "<leader>m", ":MarkdownPreview<cr>", opts)

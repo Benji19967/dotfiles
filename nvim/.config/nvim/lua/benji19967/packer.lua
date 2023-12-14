@@ -74,5 +74,5 @@ return require('packer').startup(function(use)
     use 'mg979/vim-visual-multi'
 
     -- Jupyter Notebooks
-    use 'luk400/vim-jukit'
+    -- use 'luk400/vim-jukit'
 end)
