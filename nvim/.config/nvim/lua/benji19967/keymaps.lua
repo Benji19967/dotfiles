@@ -123,3 +123,6 @@ keymap("n", "<leader>d", ":lua vim.lsp.buf.format({async=true})<cr>", opts)
 
 -- Markdown
 keymap("n", "<leader>m", ":MarkdownPreview<cr>", opts)
+
+-- Replace
+keymap("n", "<leader>r", ":%s//gc<LEFT><LEFT><LEFT>", opts)
