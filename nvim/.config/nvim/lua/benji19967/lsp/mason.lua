@@ -15,10 +15,9 @@ local servers = {
     "jsonls",
     "lua_ls",
 
-    -- Commenting out because the neovim package `rust-tools` already takes care of configuring it
-    -- "rust_analyzer", -- Just adding this line and restarting Neovim added LSP for Rust
+    "rust_analyzer", -- Just adding this line and restarting Neovim added LSP for Rust
 
-    "ruff_lsp", -- FYI: This name can be different to "Mason package", `ruff-lsp` vs `ruff_lsp`
+    "ruff_lsp",      -- FYI: This name can be different to "Mason package", `ruff-lsp` vs `ruff_lsp`
 }
 
 local settings = {
@@ -86,6 +85,11 @@ for _, server in pairs(servers) do
     if server == "pyright" then
         local pyright_opts = require "benji19967.lsp.settings.pyright"
         opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+    end
+
+    if server == "rust_analyzer" then
+        local rust_analyzer_opts = require "benji19967.lsp.settings.rust_analyzer"
+        opts = vim.tbl_deep_extend("force", rust_analyzer_opts, opts)
     end
 
     lspconfig[server].setup(opts)
