@@ -75,4 +75,7 @@ return require('packer').startup(function(use)
 
     -- Jupyter Notebooks
     -- use 'luk400/vim-jukit'
+
+    -- Rust tools
+    use 'simrat39/rust-tools.nvim'
 end)
