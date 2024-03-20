@@ -97,3 +97,6 @@ function fzf_find_edit()
 
 # https://unix.stackexchange.com/a/608616
 bindkey -s '^p' 'fzf_find_edit^M'
+
+# opam configuration
+[[ ! -r /Users/benjaminlabrecque/.opam/opam-init/init.zsh ]] || source /Users/benjaminlabrecque/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

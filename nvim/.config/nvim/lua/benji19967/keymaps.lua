@@ -126,3 +126,6 @@ keymap("n", "<leader>m", ":MarkdownPreview<cr>", opts)
 
 -- Replace
 keymap("n", "<leader>r", ":%s//gc<LEFT><LEFT><LEFT>", opts)
+
+-- Rename using LSP
+keymap("n", "<leader>n", ":lua vim.lsp.buf.rename()<cr>", opts)
