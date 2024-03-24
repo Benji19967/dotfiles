@@ -104,3 +104,12 @@ bindkey -s '^p' 'fzf_find_edit^M'
 
 # opam configuration
 [[ ! -r /Users/benjaminlabrecque/.opam/opam-init/init.zsh ]] || source /Users/benjaminlabrecque/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+
+function pyenv() 
+{
+    cd $CODE_REPO/pyenv
+    make env
+    source env/bin/activate
+    cd -
+}
