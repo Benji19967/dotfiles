@@ -51,6 +51,10 @@ alias ll="exa -l"
 alias lla="exa -la"
 alias poetry=".poetry_venv/bin/poetry"
 alias gpoetry="$HOME/.local/bin/poetry"
+alias t="tree -d -L 1"
+alias tt="tree -d -L 2"
+alias ttt="tree -d -L 3"
+
 
 # Path Aliases
 alias ap="cd $CODE_REPO"
