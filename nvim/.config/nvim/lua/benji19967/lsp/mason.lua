@@ -15,10 +15,9 @@ local servers = {
     "jsonls",
     "lua_ls",
     "ocamllsp",
-
     "rust_analyzer", -- Just adding this line and restarting Neovim added LSP for Rust
-
     "ruff_lsp",      -- FYI: This name can be different to "Mason package", `ruff-lsp` vs `ruff_lsp`
+    "clangd",
 }
 
 local settings = {
