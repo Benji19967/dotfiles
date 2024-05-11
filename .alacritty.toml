@@ -7,6 +7,7 @@ size = 18.0
 [shell]
 program = "/opt/homebrew/bin/tmux"
 # Attach to 'main' session if one exists, else create a new sessions called 'main'.
+# https://stackoverflow.com/questions/67463932/is-it-possible-to-make-alacritty-starts-with-tmux
 args = ["new-session", "-A", "-s", "main", "-c", "/Users/benjaminlabrecque/apps/home/labrecqb"]
 
 [window]
