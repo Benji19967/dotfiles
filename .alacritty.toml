@@ -1,2 +1,8 @@
 [font]
 size = 18.0
+
+[shell]
+program = "/opt/homebrew/bin/tmux"
+
+[window]
+startup_mode = "Fullscreen"
