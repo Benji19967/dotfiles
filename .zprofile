@@ -2,7 +2,7 @@
 
 CODE_REPO="${HOME}/apps/home/labrecqb"
 export PATH="${CODE_REPO}/bin:${PATH}"
-export PATH="/Users/benjaminlabrecque/.local/bin:$PATH"
+export PATH="${HOME}/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/Users/benjaminlabrecque/.rubies/ruby-3.1.3/bin:$PATH"
+export PATH="${HOME}/.rubies/ruby-3.1.3/bin:$PATH"
