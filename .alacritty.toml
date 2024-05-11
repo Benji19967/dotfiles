@@ -1,8 +1,13 @@
+# Alacritty configuration documentation
+# https://alacritty.org/config-alacritty.html
+
 [font]
 size = 18.0
 
 [shell]
 program = "/opt/homebrew/bin/tmux"
+# Attach to 'main' session if one exists, else create a new sessions called 'main'.
+args = ["new-session", "-A", "-s", "main", "-c", "/Users/benjaminlabrecque/apps/home/labrecqb"]
 
 [window]
 startup_mode = "Fullscreen"
