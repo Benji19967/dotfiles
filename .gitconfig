@@ -18,6 +18,10 @@
     diffFilter = delta --color-only
 
 [delta]
+    # delta --help for help on how to use styles
+    plus-style = 'syntax "#006000"'
+    plus-emph-style = 'syntax "#009000"'
+    side-by-side = true
     navigate = true    # use n and N to move between diff sections
 
 [merge]
