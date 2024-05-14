@@ -1,0 +1,6 @@
+# local configs, such as emails, which are not to be commited.
+[include]
+    path = ~/gitconfig-local
+
+[pull]
+	rebase = false
