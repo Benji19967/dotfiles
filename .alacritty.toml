@@ -1,6 +1,13 @@
 # Alacritty configuration documentation
 # https://alacritty.org/config-alacritty.html
 
+# Theme installation
+# https://github.com/catppuccin/alacritty
+
+import = [
+  "~/.config/alacritty/catppuccin-latte.toml"
+]
+
 [font]
 size = 18.0
 

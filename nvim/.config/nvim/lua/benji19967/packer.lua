@@ -63,6 +63,7 @@ return require('packer').startup(function(use)
     -- Colorschemes
     use 'morhetz/gruvbox'
     use "folke/tokyonight.nvim"
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     -- Markdown preview in browser
     use "iamcco/markdown-preview.nvim"
