@@ -1,2 +1,5 @@
+# Options
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#breakbeforebraces
+
 BasedOnStyle: Google
 AllowShortFunctionsOnASingleLine: Empty
