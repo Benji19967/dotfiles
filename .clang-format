@@ -1,2 +1,2 @@
-BreakBeforeBraces: Linux
-IndentWidth: 4
+BasedOnStyle: Google
+AllowShortFunctionsOnASingleLine: Empty
