@@ -17,7 +17,7 @@ local servers = {
     "ocamllsp",
     "rust_analyzer", -- Just adding this line and restarting Neovim added LSP for Rust
     "ruff_lsp",      -- FYI: This name can be different to "Mason package", `ruff-lsp` vs `ruff_lsp`
-    "clangd",
+    "clangd",        -- LSP for C/C++
     "gopls",         -- `:Mason`, `click 'i' on "gopls"`, add this line. Done, you have LSP for Go.
 }
 

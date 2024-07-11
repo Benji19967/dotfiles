@@ -64,6 +64,7 @@ return require('packer').startup(function(use)
     use 'morhetz/gruvbox'
     use "folke/tokyonight.nvim"
     use { "catppuccin/nvim", as = "catppuccin" }
+    use "neanias/everforest-nvim"
 
     -- Markdown preview in browser
     use "iamcco/markdown-preview.nvim"
