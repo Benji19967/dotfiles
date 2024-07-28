@@ -1,5 +1,5 @@
 vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.clipboard = "unnamedplus" -- to use system clipboard
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
