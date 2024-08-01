@@ -17,8 +17,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	mkdir -p ${REPO_NAME}
 	cd ${REPO_NAME}
-	gh auth login
-	gh repo create ${REPO_NAME}
+	# gh auth login
+	gh repo create
 	git init
 	git remote add origin git@github.com:Benji19967/${REPO_NAME}.git
     git pull origin master
