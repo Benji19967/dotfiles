@@ -95,6 +95,7 @@ keymap("t", "<ESC>", "<C-\\><C-n>", opts)
 
 -- Telescope -- files
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>fk", ":lua require('telescope.builtin').find_files({cwd='~/Writing/knowledge'})<cr>", opts)
 keymap("n", "<leader>fd",
     ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/dotfiles', hidden=true})<cr>", opts)
 keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
@@ -104,6 +105,7 @@ keymap("n", "<leader>o", ":lua require('telescope.builtin').oldfiles({})<cr>", o
 
 -- Telescope -- grep
 keymap("n", "<leader>gg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>gk", ":lua require('telescope.builtin').live_grep({cwd='~/Writing/knowledge'})<cr>", opts)
 keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
 keymap("n", "<leader>gp", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb'})<cr>", opts)
 keymap("n", "<leader>gr", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/rust_sandbox'})<cr>",

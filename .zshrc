@@ -63,8 +63,12 @@ alias dot="vim $CODE_REPO/dotfiles"
 alias dotdir="cd $CODE_REPO/dotfiles"
 alias dotnvim="vim $CODE_REPO/dotfiles/nvim/.config/nvim"
 alias dotnvimdir="cd $CODE_REPO/dotfiles/nvim/.config/nvim"
+alias know="vim $HOME/Writing/knowledge"
+alias knowdir="cd $HOME/Writing/knowledge"
 alias nlp="cd $CODE_REPO/nlp"
 alias ner="cd $CODE_REPO/nlp/ner"
+alias dsc="cd $CODE_REPO/data_structures/ds_c"
+
 #alias lua="cd $CODE_REPO/dotfiles/nvim/.config/nvim/lua/benji19967"
 
 autoload -Uz compinit
