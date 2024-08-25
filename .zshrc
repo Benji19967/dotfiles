@@ -120,3 +120,9 @@ function pyenv()
     source env/bin/activate
     cd -
 }
+
+function TODO() 
+{
+    rg "TODO" . $@
+}
+
