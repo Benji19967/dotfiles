@@ -16,4 +16,10 @@ require "benji19967.comment"
 require "benji19967.luasnip"
 require "benji19967.snips"
 require "benji19967.buf"
-vim.cmd "colorscheme catppuccin-latte"
+
+-- To switch between "light" / "dark": need to explicitely set (cannot just uncomment)
+vim.o.background = "light"
+
+-- vim.cmd "colorscheme gruvbox"
+vim.cmd "colorscheme everforest"
+-- vim.cmd "colorscheme tokyonight"
