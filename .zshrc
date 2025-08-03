@@ -7,8 +7,8 @@ setopt PROMPT_SUBST
 
 # Use single quotes for PROMPT value so it updates on every command
 # https://unix.stackexchange.com/questions/14266/how-do-you-make-rprompt-in-zsh-update-itself-on-every-enter
-# PROMPT='labrecqb %F{blue}(${vcs_info_msg_0_})%f %1~$ '
-PROMPT='%F{blue}(${vcs_info_msg_0_})%f %1~$ '
+PROMPT='labrecqb %F{blue}(${vcs_info_msg_0_})%f %1~$ '
+# PROMPT='%F{blue}(${vcs_info_msg_0_})%f %1~$ '
 zstyle ':vcs_info:git:*' formats '%b'
 
 # zsh plugins
@@ -124,5 +124,15 @@ function pyenv()
 function TODO() 
 {
     rg "TODO" . $@
+}
+
+function find_dir_here()
+{
+    find . -type d -name $@
+}
+
+function find_file_here()
+{
+    find . -type f -name $@
 }
 

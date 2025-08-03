@@ -21,5 +21,5 @@ require "benji19967.buf"
 vim.o.background = "light"
 
 -- vim.cmd "colorscheme gruvbox"
-vim.cmd "colorscheme everforest"
--- vim.cmd "colorscheme tokyonight"
+-- vim.cmd "colorscheme everforest"
+vim.cmd "colorscheme tokyonight"
