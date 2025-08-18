@@ -11,6 +11,11 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
+    filters = {
+        dotfiles = true,      -- hides dotfiles (e.g. `.git`, `.env`)
+        custom = { "^env$" }, -- hide `env`
+        -- git_ignored = true, -- hides files in .gitignore
+    },
     -- Show files and dirs mentioned in .gitignore in tree
     git = {
         enable = true,
