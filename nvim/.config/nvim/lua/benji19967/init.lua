@@ -16,6 +16,9 @@ require "benji19967.luasnip"
 require "benji19967.snips"
 require "benji19967.buf"
 
+-- https://github.com/nvim-tree/nvim-tree.lua/issues/767
+require 'nvim-tree'.setup {}
+
 -- To switch between "light" / "dark": need to explicitely set (cannot just uncomment)
 vim.o.background = "light"
 
