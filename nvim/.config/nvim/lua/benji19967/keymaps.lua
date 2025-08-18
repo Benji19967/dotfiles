@@ -54,6 +54,17 @@ keymap("n", "<C-Tab>", ":bprevious<CR>", opts)
 -- This works for Ctrl-_ and Ctrl-/
 keymap("n", "<C-_>", ":normal gcc<CR>", opts)
 
+-- Add `type: ignore` add end of line using a keymap
+vim.keymap.set("n", "<leader>ti", function()
+    local line = vim.api.nvim_get_current_line()
+    -- Check if it's already added to avoid duplication
+    if not line:find("# type: ignore", 1, true) then
+        -- Append to line with spacing
+        line = line .. "  # type: ignore"
+        vim.api.nvim_set_current_line(line)
+    end
+end, { desc = "Append '# type: ignore' to line" })
+
 -- ##############
 -- ### Insert ###
 -- ##############
