@@ -47,9 +47,9 @@ alias notes="vim $CODE_REPO/notes"
 alias notesdir="cd $CODE_REPO/notes"
 alias todo="vim $CODE_REPO/notes/todo.md"
 alias cl="clear"
-alias ls="exa -l"
-alias ll="exa -l"
-alias lla="exa -la"
+alias ls="eza -l"
+alias ll="eza -l"
+alias lla="eza -la"
 alias poetry=".poetry_venv/bin/poetry"
 alias gpoetry="$HOME/.local/bin/poetry"
 alias t="tree -d -L 1"
@@ -68,6 +68,7 @@ alias knowdir="cd $HOME/Writing/knowledge"
 alias nlp="cd $CODE_REPO/nlp"
 alias ner="cd $CODE_REPO/nlp/ner"
 alias dsc="cd $CODE_REPO/data_structures/ds_c"
+alias bene="cd $CODE_REPO/benefri"
 
 #alias lua="cd $CODE_REPO/dotfiles/nvim/.config/nvim/lua/benji19967"
 
@@ -136,3 +137,12 @@ function find_file_here()
     find . -type f -name $@
 }
 
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/benjaminlabrecque/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
