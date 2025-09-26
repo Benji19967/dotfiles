@@ -16,6 +16,7 @@ alias poetry=".poetry_venv/bin/poetry"
 alias cl="clear"
 
 # Paths
+alias ..="cd .."
 alias ap="cd $CODE_REPO"
 alias dot="vim $CODE_REPO/dotfiles"
 alias dotdir="cd $CODE_REPO/dotfiles"
