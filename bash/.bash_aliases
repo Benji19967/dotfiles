@@ -1,3 +1,5 @@
+WORKSPACE=${HOME}/apps/home/labrecqb
+
 # Bash
 alias rc="vim ~/.bashrc"
 alias src="source ~/.bashrc"
@@ -17,6 +19,6 @@ alias cl="clear"
 
 # Paths
 alias ..="cd .."
-alias ap="cd $CODE_REPO"
-alias dot="vim $CODE_REPO/dotfiles"
-alias dotdir="cd $CODE_REPO/dotfiles"
+alias ap="cd $WORKSPACE"
+alias dot="vim $WORKSPACE/dotfiles"
+alias dotdir="cd $WORKSPACE/dotfiles"
