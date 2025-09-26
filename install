@@ -2,3 +2,4 @@
 
 stow bash --target=${HOME}
 stow nvim --target=${HOME}
+stow tmux --target=${HOME}
