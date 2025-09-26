@@ -22,3 +22,6 @@ alias ..="cd .."
 alias ap="cd $WORKSPACE"
 alias dot="vim $WORKSPACE/dotfiles"
 alias dotdir="cd $WORKSPACE/dotfiles"
+
+# Neovim
+alias vim="~/neovim/build/bin/nvim"
