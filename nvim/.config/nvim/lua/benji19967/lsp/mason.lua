@@ -12,13 +12,13 @@ end
 
 local servers = {
     "pyright",
-    "jsonls",
-    "lua_ls",
-    "ocamllsp",
-    "rust_analyzer", -- Just adding this line and restarting Neovim added LSP for Rust
-    "ruff",
+    -- "jsonls",
+    -- "lua_ls",
+    -- "ocamllsp",
+    -- "rust_analyzer", -- Just adding this line and restarting Neovim added LSP for Rust
+    -- "ruff",
     "clangd",        -- LSP for C/C++
-    "gopls",         -- `:Mason`, `click 'i' on "gopls"`, add this line. Done, you have LSP for Go.
+    -- "gopls",         -- `:Mason`, `click 'i' on "gopls"`, add this line. Done, you have LSP for Go.
     "julials",       -- `:Mason`, `click 'i' on "julia-lsp"`, add this line. Done, you have LSP for Julia.
 }
 
