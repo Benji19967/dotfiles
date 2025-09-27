@@ -11,6 +11,11 @@ alias s="git status"
 alias c="git commit -am "
 alias b="git branch"
 
+# ls
+alias ls="ls -l"
+alias ll="ls -l"
+alias lla="ls -la"
+
 # Python
 alias poetry=".poetry_venv/bin/poetry"
 
