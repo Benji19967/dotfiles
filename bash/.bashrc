@@ -136,8 +136,9 @@ export TURTLEBOT3_MODEL=burger
 #export ROS_MASTER_URI=http://localhost:11311
 #export ROS_HOSTNAME=localhost
 
-export ROS_MASTER_URI=http://192.168.1.4:11311
-export ROS_HOSTNAME=192.168.1.4
+HOSTNAME=$(hostname -I | xargs) # xargs strips whitespace
+export ROS_MASTER_URI=http://${HOSTNAME}:11311
+export ROS_HOSTNAME=${HOSTNAME}
 
 ##### CUSTOM BENJAMIN
 
