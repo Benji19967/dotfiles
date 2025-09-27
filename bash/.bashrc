@@ -133,12 +133,14 @@ source ~/profab_ws/devel/setup.bash
 export LIBGL_ALWAYS_SOFTWARE=1
 export TURTLEBOT3_MODEL=burger
 
-#export ROS_MASTER_URI=http://localhost:11311
-#export ROS_HOSTNAME=localhost
+# For simulation
+export ROS_MASTER_URI=http://localhost:11311
+export ROS_HOSTNAME=localhost
 
-HOSTNAME=$(hostname -I | xargs) # xargs strips whitespace
-export ROS_MASTER_URI=http://${HOSTNAME}:11311
-export ROS_HOSTNAME=${HOSTNAME}
+# For real robot
+# HOSTNAME=$(hostname -I | xargs) # xargs strips whitespace
+# export ROS_MASTER_URI=http://${HOSTNAME}:11311
+# export ROS_HOSTNAME=${HOSTNAME}
 
 ##### CUSTOM BENJAMIN
 
