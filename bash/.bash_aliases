@@ -4,6 +4,7 @@ WORKSPACE=${HOME}/apps/home/labrecqb
 alias rc="vim ~/.bashrc"
 alias src="source ~/.bashrc"
 alias rca="vim ~/.bash_aliases"
+alias rcp="vim ~/.bash_profile"
 
 # Git
 alias gd="git diff"
@@ -27,6 +28,11 @@ alias ..="cd .."
 alias ap="cd $WORKSPACE"
 alias dot="vim $WORKSPACE/dotfiles"
 alias dotdir="cd $WORKSPACE/dotfiles"
+alias mach="cd $WORKSPACE/machine_setup"
+
+## Paths - ROS
+PROFAB_WORKSPACE=$HOME/profab_ws
+alias tpro="cd ${PROFAB_WORKSPACE}/src/turtlebot3_profab"
 
 # Neovim
 alias vim="~/neovim/build/bin/nvim"

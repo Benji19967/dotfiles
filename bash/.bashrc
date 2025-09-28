@@ -153,4 +153,10 @@ fi
 alias myip='192.168.1.4'
 
 
+# Fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"

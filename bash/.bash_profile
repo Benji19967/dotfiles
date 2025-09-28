@@ -1,4 +1,9 @@
-WORKSPACE="${HOME}/apps/home/labrecqb"
-export ${WORKSPACE}
+source ${HOME}/.profile
+
+export WORKSPACE="${HOME}/apps/home/labrecqb"
 export PATH="${WORKSPACE}/bin:${PATH}"
-export PATH="${HOME}/.local/bin:$PATH"
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
