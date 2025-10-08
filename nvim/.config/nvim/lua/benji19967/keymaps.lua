@@ -128,6 +128,11 @@ keymap("n", "<leader>gd",
 keymap("n", "<leader>w", ":lua require('telescope.builtin').buffers({})<cr>", opts)
 keymap("n", "<leader>s", ":lua require('telescope.builtin').lsp_document_symbols({})<cr>", opts)
 
+-- Telescope -- definitions and references
+keymap("n", "gd", ":lua require('telescope.builtin').lsp_definitions({noremap=true, silent=true})<cr>", opts)
+keymap("n", "gr", ":lua require('telescope.builtin').lsp_references({noremap=true, silent=true})<cr>", opts)
+keymap("n", "gs", ":lua require('telescope.builtin').grep_string({noremap=true, silent=true})<cr>", opts)
+
 -- NetRW
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 

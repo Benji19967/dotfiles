@@ -141,6 +141,8 @@ export ROS_HOSTNAME=localhost
 # HOSTNAME=$(hostname -I | xargs) # xargs strips whitespace
 # export ROS_MASTER_URI=http://${HOSTNAME}:11311
 # export ROS_HOSTNAME=${HOSTNAME}
+# export TURTLEBOT3_HOSTNAME=ubuntu@192.168.1.106
+
 
 ##### CUSTOM BENJAMIN
 
@@ -160,3 +162,24 @@ alias myip='192.168.1.4'
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
+
+# Functions
+function a() 
+{
+    source env/bin/activate
+}
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/ubuntu/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/ubuntu/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
