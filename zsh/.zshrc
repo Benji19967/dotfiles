@@ -48,6 +48,22 @@ function fzf_find_edit()
 # https://unix.stackexchange.com/a/608616
 bindkey -s '^p' 'fzf_find_edit^M'
 
+# Source shell-base files
+BASE_SHELL_CONFIG_DIR="$HOME/.config/shell"
+if [[ -d "$BASE_SHELL_CONFIG_DIR" ]]; then
+  for file in "$BASE_SHELL_CONFIG_DIR"/*.zsh(N); do
+    source "$file"
+  done
+fi
+
+# Source .zshrc.d files
+ZSHRC_D="$HOME/.zshrc.d"
+if [[ -d "$ZSHRC_D" ]]; then
+  for file in "$ZSHRC_D"/*.zsh(N); do
+    source "$file"
+  done
+fi
+
 # opam configuration
 [[ ! -r /Users/benjaminlabrecque/.opam/opam-init/init.zsh ]] || source /Users/benjaminlabrecque/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
