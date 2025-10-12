@@ -1,5 +1,6 @@
 #!/bin/bash
 
+stow shell-base --target=${HOME}
 stow zsh --target=${HOME}
 stow alacritty --target=${HOME}
 

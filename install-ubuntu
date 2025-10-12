@@ -1,5 +1,6 @@
 #!/bin/bash
 
+stow shell-base --target=${HOME}
 stow bash --target=${HOME}
 
 stow nvim --target=${HOME}
