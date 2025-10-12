@@ -69,6 +69,7 @@ alias nlp="cd $CODE_REPO/nlp"
 alias ner="cd $CODE_REPO/nlp/ner"
 alias dsc="cd $CODE_REPO/data_structures/ds_c"
 alias bene="cd $CODE_REPO/benefri"
+alias mach="cd $CODE_REPO/machine_setup"
 
 #alias lua="cd $CODE_REPO/dotfiles/nvim/.config/nvim/lua/benji19967"
 
