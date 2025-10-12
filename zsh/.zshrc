@@ -51,7 +51,7 @@ bindkey -s '^p' 'fzf_find_edit^M'
 # Source shell-base files
 BASE_SHELL_CONFIG_DIR="$HOME/.config/shell"
 if [[ -d "$BASE_SHELL_CONFIG_DIR" ]]; then
-  for file in "$BASE_SHELL_CONFIG_DIR"/*.zsh(N); do
+  for file in "$BASE_SHELL_CONFIG_DIR"/*.sh(N); do
     source "$file"
   done
 fi
@@ -59,7 +59,7 @@ fi
 # Source .zshrc.d files
 ZSHRC_D="$HOME/.zshrc.d"
 if [[ -d "$ZSHRC_D" ]]; then
-  for file in "$ZSHRC_D"/*.zsh(N); do
+  for file in "$ZSHRC_D"/*.sh(N); do
     source "$file"
   done
 fi
