@@ -1,6 +1,7 @@
 # Zsh
+alias src="source ~/.zshrc"
 alias rc="vim ~/.zshrc"
-alias prc="vim ~/.zprofile"
+alias rcp="vim ~/.zprofile"
 
 # Neovim
 alias vim="nvim"

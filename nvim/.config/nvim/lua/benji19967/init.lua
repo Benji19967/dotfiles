@@ -20,7 +20,7 @@ require "benji19967.buf"
 require 'nvim-tree'.setup {}
 
 -- To switch between "light" / "dark": need to explicitely set (cannot just uncomment)
-vim.o.background = "light"
+vim.o.background = "dark"
 
 -- vim.cmd "colorscheme gruvbox"
 -- vim.cmd "colorscheme everforest"
