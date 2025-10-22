@@ -1,4 +1,4 @@
-start_tmux_session() {
+tmux_start_session() {
   local SESSION="$1"
   local SHELL_WINDOW_NAME="${2:-shell}"
   local EDITOR_WINDOW_NAME="${3:-editor}"
