@@ -20,5 +20,3 @@ tmux new-window -t $session:$window -n 'example-second-window'
 tmux send-keys -t $session:$window 'cd $CODE_REPO/housing' C-m
 tmux send-keys -t $session:$window 'source env/bin/activate' C-m
 tmux send-keys -t $session:$window 'vim .' C-m
-
-tmux select-window -t $session:workspace
