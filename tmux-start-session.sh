@@ -22,7 +22,4 @@ tmux_start_session() {
     # Go back to shell window
     tmux select-window -t "$SESSION:$SHELL_WINDOW_NAME"
   fi
-
-  # Attach to the session
-  tmux attach-session -t "$SESSION"
 }
