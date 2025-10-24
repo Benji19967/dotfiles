@@ -15,6 +15,7 @@ require "benji19967.comment"
 require "benji19967.luasnip"
 require "benji19967.snips"
 require "benji19967.buf"
+require "benji19967.refactoring"
 
 -- https://github.com/nvim-tree/nvim-tree.lua/issues/767
 require 'nvim-tree'.setup {}

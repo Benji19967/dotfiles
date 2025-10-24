@@ -80,4 +80,13 @@ return require('packer').startup(function(use)
 
     -- Rust tools
     use 'simrat39/rust-tools.nvim'
+
+    -- Refactoring
+    use {
+        "ThePrimeagen/refactoring.nvim",
+        requires = {
+            {"nvim-lua/plenary.nvim"},
+            {"nvim-treesitter/nvim-treesitter"}
+        }
+    }
 end)
