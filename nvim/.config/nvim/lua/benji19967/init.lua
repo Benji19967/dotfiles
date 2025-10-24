@@ -5,6 +5,7 @@ require "benji19967.remap"
 -- require "benji19967.rust-tools"
 require "benji19967.cmp"
 require "benji19967.telescope"
+require "benji19967.project"
 require "benji19967.lsp"
 require "benji19967.treesitter"
 require "benji19967.gitsigns"
@@ -21,8 +22,8 @@ require "benji19967.refactoring"
 require 'nvim-tree'.setup {}
 
 -- To switch between "light" / "dark": need to explicitely set (cannot just uncomment)
-vim.o.background = "light"
+vim.o.background = "dark"
 
 -- vim.cmd "colorscheme gruvbox"
 -- vim.cmd "colorscheme everforest"
-vim.cmd "colorscheme tokyonight"
+vim.cmd "colorscheme tokyonight-day"

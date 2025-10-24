@@ -125,6 +125,17 @@ telescope.setup {
         -- builtin picker
     },
     extensions = {
+        project = {
+            base_dirs = {
+                -- Not sure this works
+                { path = os.getenv("WORKSPACE") .. "/dotfiles", max_depth = 1 },
+            },
+            hidden_files = true, -- show hidden files
+            theme = 'dropdown',
+            order_by = 'recent',
+            search_by = 'title',
+            sync_with_nvim_tree = true, -- if you use nvim-tree
+        }
         -- Your extension configuration goes here:
         -- extension_name = {
         --   extension_config_key = value,
@@ -132,3 +143,5 @@ telescope.setup {
         -- please take a look at the readme of the extension you want to configure
     },
 }
+
+require('telescope').load_extension('projects')

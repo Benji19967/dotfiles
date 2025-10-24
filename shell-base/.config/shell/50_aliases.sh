@@ -1,10 +1,5 @@
-WORKSPACE=${HOME}/apps/home/labrecqb
-
-# Bash
-alias rc="vim ~/.bashrc"
-alias src="source ~/.bashrc"
-alias rca="vim ~/.bash_aliases"
-alias rcp="vim ~/.bash_profile"
+# Tmux
+alias trc="vim ~/.tmux.conf"
 
 # Git
 alias gd="git diff"
@@ -23,16 +18,19 @@ alias poetry=".poetry_venv/bin/poetry"
 # General
 alias cl="clear"
 
+# Tree
+alias t="tree -d -L 1"
+alias tt="tree -d -L 2"
+alias ttt="tree -d -L 3"
+
 # Paths
 alias ..="cd .."
 alias ap="cd $WORKSPACE"
 alias dot="vim $WORKSPACE/dotfiles"
 alias dotdir="cd $WORKSPACE/dotfiles"
+alias dotnvim="vim $CODE_REPO/dotfiles/nvim/.config/nvim"
+alias dotnvimdir="cd $CODE_REPO/dotfiles/nvim/.config/nvim"
+alias notes="vim $CODE_REPO/notes"
+alias notesdir="cd $CODE_REPO/notes"
 alias mach="cd $WORKSPACE/machine_setup"
-
-## Paths - ROS
-PROFAB_WORKSPACE=$HOME/profab_ws
-alias tpro="cd ${PROFAB_WORKSPACE}/src/turtlebot3_profab"
-
-# Neovim
-alias vim="~/neovim/build/bin/nvim"
+alias todo="vim $CODE_REPO/notes/todo.md"

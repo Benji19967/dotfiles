@@ -1,0 +1,11 @@
+#!/bin/bash
+
+stow shell-base --target=${HOME}
+stow zsh --target=${HOME}
+stow alacritty --target=${HOME}
+
+stow nvim --target=${HOME}
+stow tmux --target=${HOME}
+stow git --target=${HOME}
+stow clang --target=${HOME}
+stow bin --target=${HOME}/.local/bin

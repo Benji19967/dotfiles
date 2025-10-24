@@ -1,0 +1,43 @@
+# Alacritty configuration documentation
+# https://alacritty.org/config-alacritty.html
+
+# Theme installation
+# https://github.com/catppuccin/alacritty
+
+# (Other) Themes installation
+# https://github.com/alacritty/alacritty-theme
+
+
+# Change theme
+# ```shell
+#   alacritty-theme
+# ```
+
+[general]
+import = [
+    # "~/.config/alacritty/themes/themes/everforest_dark.toml"
+    # "~/.config/alacritty/themes/themes/everforest_light.toml"
+    # "~/.config/alacritty/catppuccin-latte.toml"
+    # "~/.config/alacritty/everforest-dark-hard.toml"
+    "~/.config/alacritty/themes/tokyo-night.toml"
+    # "~/.config/alacritty/themes/tokyo-night-storm.toml"
+]
+
+[font]
+size = 18.0
+normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
+
+[shell]
+program =  "/Users/benjaminlabrecque/apps/home/labrecqb/dotfiles/tmux-launch.sh"
+# program = "/bin/zsh"
+# args = ["-l", "-c", "/Users/benjaminlabrecque/apps/home/labrecqb/dotfiles/tmux-launch.sh"]
+
+# TMUX -- just launch TMUX
+# program = "/opt/homebrew/bin/tmux"
+# # Attach to 'main' session if one exists, else create a new sessions called 'main'.
+# # "-D" makes that all other clients connected to the session are detached from the session.
+# # https://stackoverflow.com/questions/67463932/is-it-possible-to-make-alacritty-starts-with-tmux
+# args = ["new-session", "-A", "-s", "main", "-D", "-c", "/Users/benjaminlabrecque/apps/home/labrecqb"]
+
+[window]
+startup_mode = "Fullscreen"

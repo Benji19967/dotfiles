@@ -16,14 +16,22 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-telescope/telescope.nvim'
-    use 'nvim-telescope/telescope-fzy-native.nvim'
     use 'windwp/nvim-autopairs'
     use 'numToStr/Comment.nvim' -- Easily comment stuff
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-tree/nvim-tree.lua'
-    use { "ellisonleao/glow.nvim" }
+    use 'ellisonleao/glow.nvim'
+
+    -- Telescope
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'ahmedkhalf/project.nvim',
+            'nvim-telescope/telescope-project.nvim',
+            'nvim-telescope/telescope-fzy-native.nvim'
+        },
+    }
 
     -- cmp plugins
     use 'hrsh7th/nvim-cmp'
@@ -39,7 +47,7 @@ return require('packer').startup(function(use)
 
     -- LSP
     use 'neovim/nvim-lspconfig'
-    use 'jose-elias-alvarez/null-ls.nvim'
+    use 'nvimtools/none-ls.nvim'
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
 
@@ -68,9 +76,6 @@ return require('packer').startup(function(use)
 
     -- Markdown preview in browser
     use "iamcco/markdown-preview.nvim"
-
-    -- Quickly navigate to projects
-    use "ahmedkhalf/project.nvim"
 
     -- Multi-cursor
     use 'mg979/vim-visual-multi'
