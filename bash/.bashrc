@@ -181,12 +181,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
 
-# Functions
-function a() 
-{
-    source env/bin/activate
-}
-
 # >>> juliaup initialize >>>
 
 # !! Contents within this block are managed by juliaup !!
