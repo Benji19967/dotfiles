@@ -146,6 +146,16 @@ export ROS_HOSTNAME=localhost
 
 ##### CUSTOM BENJAMIN
 
+# Source shell-base files
+BASE_SHELL_CONFIG_DIR="$HOME/.config/shell"
+if [ -d "$BASE_SHELL_CONFIG_DIR" ]; then
+  shopt -s nullglob
+  for file in "$BASE_SHELL_CONFIG_DIR"/*.sh; do
+    [ -r "$file" ] && . "$file"
+  done
+  shopt -u nullglob
+fi
+
 # Source .bashrc.d files
 BASHRC_D="$HOME/.bashrc.d"
 if [ -d "$BASHRC_D" ]; then
