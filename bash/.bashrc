@@ -146,6 +146,14 @@ export ROS_HOSTNAME=localhost
 
 ##### CUSTOM BENJAMIN
 
+# Source .bashrc.d files
+BASHRC_D="$HOME/.bashrc.d"
+if [ -d "$BASHRC_D" ]; then
+  for file in "$BASHRC_D"/*.sh; do
+    [ -r "$file" ] && . "$file"
+  done
+fi
+
 # Launch tmux on shell startup
 # https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
