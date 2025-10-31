@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 source tmux-start-session.sh
 

@@ -19,7 +19,7 @@ function double_file()
     x=$(cat $filename) && echo "$x" >> $filename
 }
 
-function pyenv() 
+function create_python_env() 
 {
     cd $CODE_REPO/pyenv
     make env

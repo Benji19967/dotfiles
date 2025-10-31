@@ -146,11 +146,29 @@ export ROS_HOSTNAME=localhost
 
 ##### CUSTOM BENJAMIN
 
+# Source shell-base files
+BASE_SHELL_CONFIG_DIR="$HOME/.config/shell"
+if [ -d "$BASE_SHELL_CONFIG_DIR" ]; then
+  shopt -s nullglob
+  for file in "$BASE_SHELL_CONFIG_DIR"/*.sh; do
+    [ -r "$file" ] && . "$file"
+  done
+  shopt -u nullglob
+fi
+
+# Source .bashrc.d files
+BASHRC_D="$HOME/.bashrc.d"
+if [ -d "$BASHRC_D" ]; then
+  for file in "$BASHRC_D"/*.sh; do
+    [ -r "$file" ] && . "$file"
+  done
+fi
+
 # Launch tmux on shell startup
 # https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec ${HOME}/tmux/tmux
-fi
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   exec ${HOME}/tmux/tmux
+# fi
 
 alias myip='192.168.1.4'
 
@@ -162,12 +180,6 @@ alias myip='192.168.1.4'
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
-
-# Functions
-function a() 
-{
-    source env/bin/activate
-}
 
 # >>> juliaup initialize >>>
 
