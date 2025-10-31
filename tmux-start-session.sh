@@ -11,8 +11,9 @@ tmux_start_session() {
     # Create new session detached
     tmux new-session -d -s "$SESSION"
 
-    # Rename current window
+    # Configure shell window
     tmux rename-window -t "$SESSION:0" "$SHELL_WINDOW_NAME"
+    tmux send-keys -t "$SESSION:$SHELL_WINDOW_NAME" "cd $WORKSPACE/$SESSION" C-m
 
     # Create editor window
     tmux new-window -t "$SESSION" -n "$EDITOR_WINDOW_NAME"

@@ -1,6 +1,11 @@
-function a() 
-{
-    source env/bin/activate
+function a() {
+    if [ -d "env" ]; then
+        source env/bin/activate
+    elif [ -d ".venv" ]; then
+        source .venv/bin/activate
+    else
+        echo "No virtual environment found in env/ or .venv/"
+    fi
 }
 
 function knit()
