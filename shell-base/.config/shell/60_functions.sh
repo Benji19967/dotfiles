@@ -42,3 +42,7 @@ function find_file_here()
     find . -type f -name $@
 }
 
+function p()
+{
+    realpath $@
+}
