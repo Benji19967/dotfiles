@@ -79,6 +79,9 @@ return require('packer').startup(function(use)
 
     -- Markdown preview in browser
     use "iamcco/markdown-preview.nvim"
+    use 'OXY2DEV/markview.nvim'
+    -- to try:
+    -- use 'MeanderingProgrammer/render-markdown.nvim',
 
     -- Multi-cursor
     use 'mg979/vim-visual-multi'
