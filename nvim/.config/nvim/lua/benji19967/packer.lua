@@ -29,7 +29,10 @@ return require('packer').startup(function(use)
             'nvim-lua/plenary.nvim',
             'ahmedkhalf/project.nvim',
             'nvim-telescope/telescope-project.nvim',
-            'nvim-telescope/telescope-fzy-native.nvim'
+            'nvim-telescope/telescope-fzy-native.nvim',
+            -- Images (needs: popup, media-files, plenary)
+            'nvim-telescope/telescope-media-files.nvim',
+            'nvim-lua/popup.nvim'
         },
     }
 
@@ -90,8 +93,11 @@ return require('packer').startup(function(use)
     use {
         "ThePrimeagen/refactoring.nvim",
         requires = {
-            {"nvim-lua/plenary.nvim"},
-            {"nvim-treesitter/nvim-treesitter"}
+            { "nvim-lua/plenary.nvim" },
+            { "nvim-treesitter/nvim-treesitter" }
         }
     }
+
+    -- Many quality of life plugins
+    use "folke/snacks.nvim"
 end)
