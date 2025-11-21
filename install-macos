@@ -3,6 +3,7 @@
 stow shell-base --target=${HOME}
 stow zsh --target=${HOME}
 stow alacritty --target=${HOME}
+stow ghostty --target=${HOME}
 
 stow nvim --target=${HOME}
 stow tmux --target=${HOME}

@@ -1,0 +1,9 @@
+shell-integration = zsh
+
+background = 282c34
+foreground = ffffff
+
+cursor-style-blink = false
+
+# -i uses interactive shell, so .zshrc is sourced
+initial-command = /bin/zsh --login -c -i "/Users/benjaminlabrecque/apps/home/labrecqb/dotfiles/tmux-launch.sh"
