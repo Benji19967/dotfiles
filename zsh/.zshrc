@@ -34,20 +34,6 @@ fpath+=~/.zfunc
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-# https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html
-function fzf_find_edit() 
-{
-    local dir=$(ls -1 | fzf);
-    if [[ -n "$dir" ]]; then
-        cd "$dir"
-        vim .
-    fi
-}
-
-# https://unix.stackexchange.com/a/608616
-bindkey -s '^p' 'fzf_find_edit^M'
-
 # Source shell-base files
 BASE_SHELL_CONFIG_DIR="$HOME/.config/shell"
 if [[ -d "$BASE_SHELL_CONFIG_DIR" ]]; then

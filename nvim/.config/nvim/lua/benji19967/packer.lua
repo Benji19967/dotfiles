@@ -16,9 +16,11 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+
     use 'windwp/nvim-autopairs'
     use 'numToStr/Comment.nvim' -- Easily comment stuff
     use 'nvim-tree/nvim-web-devicons'
+    
     use 'nvim-tree/nvim-tree.lua'
     use 'ellisonleao/glow.nvim'
 
