@@ -38,7 +38,8 @@ fpath+=~/.zfunc
 # https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html
 function fzf_find_edit() 
 {
-    local dir=$(ls -1 | fzf);
+    # local dir=$(ls -1 | fzf);
+    local dir=$(ls -1 ${WORKSPACE} | fzf)
     if [[ -n "$dir" ]]; then
         cd "$dir"
         nvim .
