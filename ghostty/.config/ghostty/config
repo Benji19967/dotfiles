@@ -3,7 +3,6 @@ shell-integration = zsh
 font-size = 18
 background = 282c34
 foreground = ffffff
-fullscreen = true
 
 cursor-style-blink = false
 
