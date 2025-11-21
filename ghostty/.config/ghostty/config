@@ -1,8 +1,9 @@
 shell-integration = zsh
 
 font-size = 18
-background = 282c34
-foreground = ffffff
+# background = 282c34
+# foreground = ffffff
+theme = Monokai Pro Light
 
 cursor-style-blink = false
 

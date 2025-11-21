@@ -44,6 +44,14 @@ vim.opt.cursorline = true
 vim.opt.guicursor = ""
 vim.g.slime_target = "tmux"
 
+-- Currently using: plugins/colorscheme.lua
+-- To switch between "light" / "dark": need to explicitely set (cannot just uncomment)
+-- vim.o.background = "light"
+
+-- vim.cmd("colorscheme gruvbox")
+-- vim.cmd "colorscheme everforest"
+-- vim.cmd("colorscheme tokyonight-day")
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
