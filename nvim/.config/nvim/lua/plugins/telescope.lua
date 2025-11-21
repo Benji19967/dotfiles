@@ -4,6 +4,15 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
 
   opts = {
+
+    pickers = {
+      oldfiles = {
+        only_cwd = true,
+        file_ignore_patterns = {},
+        validate = true,
+      },
+    },
+
     defaults = {
       path_display = {
         filename_first = {

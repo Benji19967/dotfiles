@@ -25,11 +25,13 @@ tmux_start_session() {
     # Configure nvim window
     tmux rename-window -t "$SESSION:0" "$EDITOR_WINDOW_NAME"
     tmux send-keys -t "$SESSION:$EDITOR_WINDOW_NAME" "cd $WORKSPACE/$SESSION" C-m
+    tmux send-keys -t "$SESSION:$EDITOR_WINDOW_NAME" "a" C-m
     tmux send-keys -t "$SESSION:$EDITOR_WINDOW_NAME" "vim ." C-m
 
     # Create terminal window
     tmux new-window -t "$SESSION" -n "$SHELL_WINDOW_NAME"
-    tmux send-keys -t "$SESSION:$SHELL_WINDOW_NAME" "cd $WORKSPACE/$SESSION; clear" C-m
+    tmux send-keys -t "$SESSION:$SHELL_WINDOW_NAME" "cd $WORKSPACE/$SESSION" C-m
+    tmux send-keys -t "$SESSION:$SHELL_WINDOW_NAME" "a; clear" C-m
 
     # Go back to editor window
     tmux select-window -t "$SESSION:$EDITOR_WINDOW_NAME"
