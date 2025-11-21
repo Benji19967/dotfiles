@@ -41,7 +41,7 @@ function fzf_find_edit()
     local dir=$(ls -1 | fzf);
     if [[ -n "$dir" ]]; then
         cd "$dir"
-        vim .
+        nvim .
     fi
 }
 
