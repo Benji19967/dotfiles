@@ -1,1 +1,4 @@
-require "benji19967"
+require("config.lazy")
+require("config.keymaps")
+
+require("lazy").setup("plugins")

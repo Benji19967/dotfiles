@@ -3,6 +3,10 @@
 stow shell-base --target=${HOME}
 stow zsh --target=${HOME}
 stow alacritty --target=${HOME}
+stow ghostty --target=${HOME}
+
+mkdir -p ${HOME}/.config/aerospace
+stow aerospace --target=${HOME}/.config/aerospace
 
 stow nvim --target=${HOME}
 stow tmux --target=${HOME}

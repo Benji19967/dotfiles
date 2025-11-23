@@ -48,21 +48,35 @@ keymap("n", "Zz", "<C-w>_ <C-w>|", opts)
 keymap("n", "Zo", "<C-w>=", opts)
 
 -- Open last buffer
-keymap("n", "<C-Tab>", ":bprevious<CR>", opts)
+
+keymap("n", "<leader><Tab>", ":bprevious<CR>", opts)
 
 -- Comment
 -- This works for Ctrl-_ and Ctrl-/
 keymap("n", "<C-_>", ":normal gcc<CR>", opts)
 
+-- LSP
+-- Defined gd in 'keymaps' using telescope
+-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = bufnr })
+-- Defined gr in 'keymaps' using telescope
+-- vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = bufnr })
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = bufnr })
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr })
+vim.keymap.set("n", "gl", vim.diagnostic.open_float, { buffer = bufnr })
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = bufnr })
+keymap("n", "<leader>n", ":lua vim.lsp.buf.rename()<cr>", opts)
+keymap("n", "gd", ":lua require('telescope.builtin').lsp_definitions({noremap=true, silent=true})<cr>", opts)
+keymap("n", "gr", ":lua require('telescope.builtin').lsp_references({noremap=true, silent=true})<cr>", opts)
+
 -- Add `type: ignore` add end of line using a keymap
 vim.keymap.set("n", "<leader>ti", function()
-    local line = vim.api.nvim_get_current_line()
-    -- Check if it's already added to avoid duplication
-    if not line:find("# type: ignore", 1, true) then
-        -- Append to line with spacing
-        line = line .. "  # type: ignore"
-        vim.api.nvim_set_current_line(line)
-    end
+  local line = vim.api.nvim_get_current_line()
+  -- Check if it's already added to avoid duplication
+  if not line:find("# type: ignore", 1, true) then
+    -- Append to line with spacing
+    line = line .. "  # type: ignore"
+    vim.api.nvim_set_current_line(line)
+  end
 end, { desc = "Append '# type: ignore' to line" })
 
 -- ##############
@@ -107,8 +121,12 @@ keymap("t", "<ESC>", "<C-\\><C-n>", opts)
 -- Telescope -- files
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>fk", ":lua require('telescope.builtin').find_files({cwd='~/Writing/knowledge'})<cr>", opts)
-keymap("n", "<leader>fd",
-    ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/dotfiles', hidden=true})<cr>", opts)
+keymap(
+  "n",
+  "<leader>fd",
+  ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/dotfiles', hidden=true})<cr>",
+  opts
+)
 keymap("n", "<leader>fn", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
 keymap("n", "<leader>fp", ":lua require('telescope.builtin').find_files({cwd='~/apps/home/labrecqb'})<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope git_files<cr>", opts)
@@ -119,25 +137,30 @@ keymap("n", "<leader>gg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>gk", ":lua require('telescope.builtin').live_grep({cwd='~/Writing/knowledge'})<cr>", opts)
 keymap("n", "<leader>gn", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/notes'})<cr>", opts)
 keymap("n", "<leader>gp", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb'})<cr>", opts)
-keymap("n", "<leader>gr", ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/rust_sandbox'})<cr>",
-    opts)
-keymap("n", "<leader>gd",
-    ":lua require('telescope.builtin').live_grep({vimgrep_arguments = { 'rg', '--color=never', '--hidden', '--with-filename', '--line-number', '--column', '--smart-case' }})<cr>"
-    , opts)
+keymap("n", "gs", ":lua require('telescope.builtin').grep_string({noremap=true, silent=true})<cr>", opts)
+keymap(
+  "n",
+  "<leader>gr",
+  ":lua require('telescope.builtin').live_grep({cwd='~/apps/home/labrecqb/rust_sandbox'})<cr>",
+  opts
+)
+keymap(
+  "n",
+  "<leader>gd",
+  ":lua require('telescope.builtin').live_grep({vimgrep_arguments = { 'rg', '--color=never', '--hidden', '--with-filename', '--line-number', '--column', '--smart-case' }})<cr>",
+  opts
+)
 
 keymap("n", "<leader>w", ":lua require('telescope.builtin').buffers({})<cr>", opts)
 keymap("n", "<leader>s", ":lua require('telescope.builtin').lsp_document_symbols({})<cr>", opts)
 
--- Telescope -- definitions and references
-keymap("n", "gd", ":lua require('telescope.builtin').lsp_definitions({noremap=true, silent=true})<cr>", opts)
-keymap("n", "gr", ":lua require('telescope.builtin').lsp_references({noremap=true, silent=true})<cr>", opts)
-keymap("n", "gs", ":lua require('telescope.builtin').grep_string({noremap=true, silent=true})<cr>", opts)
--- Shows all diagnostics
--- keymap("n", "gl", ":lua require('telescope.builtin').diagnostics({noremap=true, silent=true})<cr>", opts)
-
 -- Telescope -- projects
-keymap("n", "<leader>p",
-    ":lua require('telescope').extensions.projects.projects({noremap=true, silent=true})<cr>", opts)
+keymap(
+  "n",
+  "<leader>p",
+  ":lua require('telescope').extensions.projects.projects({noremap=true, silent=true})<cr>",
+  opts
+)
 
 -- NetRW
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
@@ -147,9 +170,7 @@ keymap("n", "<leader>d", ":lua vim.lsp.buf.format({async=true})<cr>", opts)
 
 -- Markdown
 keymap("n", "<leader>m", ":MarkdownPreview<cr>", opts)
+keymap("n", "<leader>v", ":RenderMarkdown toggle<cr>", opts)
 
 -- Replace
 keymap("n", "<leader>r", ":%s//gc<LEFT><LEFT><LEFT>", opts)
-
--- Rename using LSP
-keymap("n", "<leader>n", ":lua vim.lsp.buf.rename()<cr>", opts)
