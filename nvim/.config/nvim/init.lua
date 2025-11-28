@@ -1,3 +1,4 @@
+require("config.diagnostics")
 require("config.lazy")
 require("config.keymaps")
 
