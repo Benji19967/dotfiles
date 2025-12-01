@@ -1,6 +1,9 @@
 shell-integration = zsh
 
-font-size = 18
+font-size = 14
+font-family = "Menlo"
+
+
 # background = 282c34
 # foreground = ffffff
 theme = Adwaita

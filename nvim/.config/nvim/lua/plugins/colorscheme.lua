@@ -10,17 +10,17 @@ return {
   --     vim.cmd("colorscheme monokai-pro")
   --   end,
   -- },
-  {
-    "Mofiqul/adwaita.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.g.adwaita_darker = true -- for darker version
-      -- vim.g.adwaita_disable_cursorline = true -- to disable cursorline
-      -- vim.g.adwaita_transparent = true -- makes the background transparent
-      vim.cmd("colorscheme adwaita")
-    end,
-  },
+  -- {
+  --   "Mofiqul/adwaita.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.g.adwaita_darker = true -- for darker version
+  --     -- vim.g.adwaita_disable_cursorline = true -- to disable cursorline
+  --     -- vim.g.adwaita_transparent = true -- makes the background transparent
+  --     vim.cmd("colorscheme adwaita")
+  --   end,
+  -- },
   -- {
   --   "Mofiqul/vscode.nvim",
   --   lazy = false,
@@ -35,7 +35,7 @@ return {
   --       -- transparent = true,
   --
   --       -- Enable italic comment
-  --       italic_comments = true,
+  --       italic_comments = false,
   --
   --       -- Enable italic inlay type hints
   --       italic_inlayhints = true,
@@ -62,6 +62,14 @@ return {
   --       },
   --     })
   --     vim.cmd("colorscheme vscode")
+  --
+  --     vim.api.nvim_create_autocmd("FileType", {
+  --       pattern = "python",
+  --       callback = function()
+  --         -- Treesitter groups
+  --         -- vim.cmd("highlight @function guifg=#FF0000")
+  --       end,
+  --     })
   --   end,
   -- },
 
@@ -78,6 +86,7 @@ return {
   --     vim.cmd.colorscheme("solarized")
   --   end,
   -- },
+
   -- {
   --   "ellisonleao/gruvbox.nvim",
   --   priority = 1000,
@@ -89,4 +98,15 @@ return {
   --     vim.cmd.colorscheme("gruvbox")
   --   end,
   -- },
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function(_, opts)
+      vim.o.termguicolors = true
+      vim.o.background = "dark"
+      vim.cmd.colorscheme("tokyonight-moon")
+    end,
+  },
 }

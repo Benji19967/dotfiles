@@ -11,9 +11,9 @@ return {
       },
       -- git_ignored = true, -- hides files in .gitignore
     },
-    -- Show files and dirs mentioned in .gitignore in tree
     git = {
       enable = true,
+      -- Show files and dirs mentioned in .gitignore in tree
       ignore = false,
       timeout = 500,
     },
@@ -24,7 +24,6 @@ return {
 
     -- TODO: remove this?
     renderer = {
-      root_folder_modifier = ":t",
       icons = {
         glyphs = {
           default = "",
@@ -39,18 +38,58 @@ return {
             symlink = "",
             symlink_open = "",
           },
+        },
+        glyphs = {
+          default = "",
+          symlink = "",
           git = {
-            unstaged = "",
-            staged = "S",
-            unmerged = "",
-            renamed = "➜",
-            untracked = "U",
-            deleted = "",
-            ignored = "◌",
+            unstaged = "",
+            staged = "",
+            unmerged = "",
+            renamed = "",
+            deleted = "",
+            untracked = "",
+            ignored = "",
+          },
+          folder = {
+            default = "",
+            open = "",
+            empty = "",
+            empty_open = "",
+            symlink = "",
           },
         },
       },
+      highlight_git = true,
     },
+    -- renderer = {
+    --   root_folder_modifier = ":t",
+    --   icons = {
+    --     glyphs = {
+    --       default = "",
+    --       symlink = "",
+    --       folder = {
+    --         arrow_open = "",
+    --         arrow_closed = "",
+    --         default = "",
+    --         open = "",
+    --         empty = "",
+    --         empty_open = "",
+    --         symlink = "",
+    --         symlink_open = "",
+    --       },
+    --       git = {
+    --         unstaged = "",
+    --         staged = "S",
+    --         unmerged = "",
+    --         renamed = "➜",
+    --         untracked = "U",
+    --         deleted = "",
+    --         ignored = "◌",
+    --       },
+    --     },
+    --   },
+    -- },
     diagnostics = {
       enable = true,
       show_on_dirs = true,
@@ -71,8 +110,8 @@ return {
     },
     actions = {
       open_file = {
-        -- Make sure tree stays closed when opening a new file
-        quit_on_open = true,
+        -- If True: makes sure tree stays closed when opening a new file
+        quit_on_open = False,
       },
     },
   },
