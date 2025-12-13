@@ -1,4 +1,4 @@
--- TODO: make this work
+-- Check this works: `:LspInfo`
 vim.lsp.config("pylsp", {
   -- Server-specific settings. See `:help lsp-quickstart`
   settings = {
