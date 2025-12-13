@@ -5,7 +5,10 @@ vim.lsp.config("pylsp", {
     ["pylsp"] = {
       plugins = {
         pycodestyle = {
-          ignore = { "E501" }, -- ignore line too long
+          ignore = {
+            "E501", -- ignore line too long
+            "E203", -- whitespace before :
+          },
           maxLineLength = 88,
         },
       },
