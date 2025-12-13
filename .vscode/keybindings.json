@@ -39,7 +39,7 @@
         "command": "toggleVim"
     },
     {
-        "key": "ctrl+c",
+        "key": "cmd+c",
         "command": "editor.action.clipboardCopyAction"
     },
     {
