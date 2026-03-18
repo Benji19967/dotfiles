@@ -24,5 +24,8 @@ return {
         t "if __name__ == \"__main__\"", t({ ":", "" }),
         t "    main()",
     }),
+    s("print", {
+        t "print(", i(1, "\"\""), t ")"
+    }),
 
 }

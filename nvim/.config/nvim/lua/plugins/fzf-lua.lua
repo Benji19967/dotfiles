@@ -7,6 +7,10 @@ return {
   opts = {
     files = {
       formatter = "path.filename_first",
+      cmd = [[
+          fd -e py
+          fd -t f -E '*.py'
+        ]],
     },
     oldfiles = {
       formatter = "path.filename_first",

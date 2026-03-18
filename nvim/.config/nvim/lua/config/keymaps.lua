@@ -178,3 +178,9 @@ keymap("n", "<leader>v", ":RenderMarkdown toggle<cr>", opts)
 
 -- Replace
 keymap("n", "<leader>r", ":%s//gc<LEFT><LEFT><LEFT>", opts)
+
+-- Hop
+keymap("n", "<leader>h", "<cmd>HopWord<cr>", opts)
+
+-- '*' stay on current word instead if jumping to next one
+keymap("n", "*", "*N", opts)
