@@ -56,6 +56,7 @@ vim.g.slime_target = "tmux"
 require("lazy").setup({
   spec = {
     -- import your plugins
+    -- { import = "lazyvim.plugins.extras.vscode" },
     { import = "plugins" },
   },
   -- Configure any other settings here. See the documentation for more details.
