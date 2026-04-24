@@ -36,3 +36,6 @@
 
 [init]
 	defaultBranch = master
+[user]
+	email = labrecque.benji@gmail.com
+	name = Benjamin Labrecque

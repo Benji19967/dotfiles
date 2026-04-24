@@ -1,5 +1,8 @@
 #!/bin/bash
 
+rm ${HOME}/.bashrc
+mkdir -p ${HOME}/.local/bin
+
 stow shell-base --target=${HOME}
 stow bash --target=${HOME}
 
