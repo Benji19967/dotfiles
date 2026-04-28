@@ -195,3 +195,4 @@ case ":$PATH:" in
 esac
 
 # <<< juliaup initialize <<<
+source /opt/ros/jazzy/setup.bash
