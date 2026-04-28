@@ -41,7 +41,7 @@ vim.opt.scrolloff = 8
 vim.opt.termguicolors = true
 vim.opt.splitright = true
 vim.opt.cursorline = true
-vim.opt.guicursor = ""
+vim.opt.guicursor = "i:ver50"
 vim.g.slime_target = "tmux"
 
 -- Currently using: plugins/colorscheme.lua

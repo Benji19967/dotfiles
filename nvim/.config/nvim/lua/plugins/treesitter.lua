@@ -24,6 +24,7 @@ return {
         "regex",
         "c",
         "xml",
+        "java",
       },
       -- sync_install = true,
       ignore_install = { "phpdoc" }, -- List of parsers to ignore installing

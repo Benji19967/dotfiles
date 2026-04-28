@@ -10,6 +10,7 @@ tmux send-keys -t "main" "cd $WORKSPACE; clear" C-m
 
 tmux_start_session dotfiles
 tmux_start_session machine_setup
+tmux_start_session notes
 
 tmux attach-session -t main
 # tmux kill-session -t main
