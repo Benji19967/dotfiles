@@ -3,7 +3,7 @@
 mkdir -p ${HOME}/.local/bin
 
 mv ~/.bash_profile ~/.bash_profile.bak
-mv ~/.bash_rc ~/.bash_rc.bak
+mv ~/.bashrc ~/.bashrc.bak
 mv ~/.gitconfig ~/.gitconfig.bak
 
 stow shell-base --target=${HOME}

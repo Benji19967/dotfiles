@@ -1,4 +1,4 @@
-source ${HOME}/.profile
+[ -f "$HOME/.profile" ] && source "$HOME/.profile"
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
