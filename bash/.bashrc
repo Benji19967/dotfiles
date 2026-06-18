@@ -136,7 +136,7 @@ fi
 # Source .bashrc.d files
 BASHRC_D="$HOME/.bashrc.d"
 if [ -d "$BASHRC_D" ]; then
-  for file in "$BASHRC_D"/*.sh; do
+  for file in "$BASHRC_D"/[0-9]*.sh; do
     [ -r "$file" ] && . "$file"
   done
 fi

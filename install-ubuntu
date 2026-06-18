@@ -1,7 +1,10 @@
 #!/bin/bash
 
-rm ${HOME}/.bashrc
 mkdir -p ${HOME}/.local/bin
+
+mv ~/.bash_profile ~/.bash_profile.bak
+mv ~/.bash_rc ~/.bash_rc.bak
+mv ~/.gitconfig ~/.gitconfig.bak
 
 stow shell-base --target=${HOME}
 stow bash --target=${HOME}
