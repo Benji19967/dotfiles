@@ -4,7 +4,6 @@
 # rm -rf /tmp/tmux-$(id -u)/*
 # unset TMUX
 # tmux start-server
-
 tmux_start_session() {
     local SESSION="$1"
     local SHELL_WINDOW_NAME="${2:-terminal}"
@@ -19,20 +18,18 @@ tmux_start_session() {
         return
     fi
 
-    # Create new session detached
-    tmux new-session -d -s "$SESSION"
-
-    # Configure nvim window
-    tmux rename-window -t "$SESSION:0" "$EDITOR_WINDOW_NAME"
+    # 1. Configure the initial window to be index 9 instead of 0
+    tmux move-window -s "$SESSION:0" -t "$SESSION:9"
+    tmux rename-window -t "$SESSION:9" "$EDITOR_WINDOW_NAME"
     tmux send-keys -t "$SESSION:$EDITOR_WINDOW_NAME" "cd $WORKSPACE/$SESSION" C-m
     tmux send-keys -t "$SESSION:$EDITOR_WINDOW_NAME" "a" C-m
     tmux send-keys -t "$SESSION:$EDITOR_WINDOW_NAME" "vim ." C-m
 
-    # Create terminal window
-    tmux new-window -t "$SESSION" -n "$SHELL_WINDOW_NAME"
+    # 2. Create the terminal window explicitly at index 0
+    tmux new-window -t "$SESSION:0" -n "$SHELL_WINDOW_NAME"
     tmux send-keys -t "$SESSION:$SHELL_WINDOW_NAME" "cd $WORKSPACE/$SESSION" C-m
     tmux send-keys -t "$SESSION:$SHELL_WINDOW_NAME" "a; clear" C-m
 
-    # Go back to editor window
-    tmux select-window -t "$SESSION:$EDITOR_WINDOW_NAME"
+    # Go back to your editor window (index 9)
+    tmux select-window -t "$SESSION:9"
 }

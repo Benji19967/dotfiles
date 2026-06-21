@@ -77,4 +77,14 @@ function fzf_add_project_as_tmux_session()
 }
 # https://unix.stackexchange.com/a/608616
 # bindkey -s '^p' 'fzf_open_project^M'
-bindkey -s '^p' 'fzf_add_project_as_tmux_session^M'
+if [ -n "$ZSH_VERSION" ]; then
+    # Zsh syntax
+    # ^M represents the Enter key (Carriage Return)
+    bindkey -s '^p' 'fzf_add_project_as_tmux_session^M'
+
+elif [ -n "$BASH_VERSION" ]; then
+    # Bash syntax
+    # \C-p represents Control+P
+    # \n or \C-m represents the Enter key
+    bind '"\C-p": "fzf_add_project_as_tmux_session\n"'
+fi
