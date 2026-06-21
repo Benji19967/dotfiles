@@ -17,6 +17,7 @@ return {
         "clangd",
         "julials",
         "lua_ls",
+        "jdtls",
       },
     },
     dependencies = {

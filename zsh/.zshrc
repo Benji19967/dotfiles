@@ -61,3 +61,5 @@ path=('/Users/benjaminlabrecque/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
+
+export PATH="/Users/benjaminlabrecque/.pixi/bin:$PATH"
