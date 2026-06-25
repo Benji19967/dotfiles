@@ -10,7 +10,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   config = function()
     require("nvim-treesitter.configs").setup({
-      branch = "master",
+      branch = "main",
       lazy = false,
       build = ":TSUpdate",
       ensure_installed = {
