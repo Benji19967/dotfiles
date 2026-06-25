@@ -18,6 +18,7 @@ return {
                 -- "julials",
                 "lua_ls",
                 "stylua",
+                "jdtls",  -- java
             },
         },
         dependencies = {
