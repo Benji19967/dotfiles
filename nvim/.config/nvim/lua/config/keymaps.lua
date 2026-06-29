@@ -85,6 +85,9 @@ end, { desc = "Append '# type: ignore' to line" })
 -- Press jk fast to exit insert mode
 -- keymap("i", "jk", "<ESC>", opts)
 
+-- Force Ctrl+C to fire the proper clear up events when leaving Insert Mode
+vim.keymap.set("i", "<C-c>", "<Esc>", { desc = "Exit insert mode safely" })
+
 -- ##############
 -- ### Visual ###
 -- ##############
