@@ -44,6 +44,9 @@ vim.opt.cursorline = true
 vim.opt.guicursor = "i:ver50"
 vim.g.slime_target = "tmux"
 
+vim.opt.ignorecase = true -- for flash.nvim
+vim.opt.smartcase = true -- for flash.nvim (search lowercase matches always, search uppercase only upper)
+
 -- Currently using: plugins/colorscheme.lua
 -- To switch between "light" / "dark": need to explicitely set (cannot just uncomment)
 -- vim.o.background = "light"
