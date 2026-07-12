@@ -17,7 +17,8 @@ return {
                 -- "clangd",
                 -- "julials",
                 "lua_ls",
-                "jdtls",
+                "stylua",
+                "jdtls",  -- java
             },
         },
         dependencies = {
