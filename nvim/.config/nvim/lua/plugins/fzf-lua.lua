@@ -13,7 +13,7 @@ return {
         ]],
     },
     oldfiles = {
-      formatter = "path.filename_first",
+      -- formatter = "path.filename_first",
       cwd_only = true,
       include_current_session = true,
     },

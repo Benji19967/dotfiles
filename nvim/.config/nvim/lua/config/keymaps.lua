@@ -122,8 +122,8 @@ keymap("t", "<ESC>", "<C-\\><C-n>", opts)
 --[[ keymap("n", "<leader>pp", ":vim ~/apps/home/labrecqb<cr>", opts) ]]
 
 -- Telescope -- files
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
--- keymap("n", "<leader>p", ":FzfLua files<cr>", opts)
+-- keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>p", ":FzfLua files<cr>", opts)
 keymap("n", "<leader>fk", ":lua require('telescope.builtin').find_files({cwd='~/Writing/knowledge'})<cr>", opts)
 keymap(
   "n",
