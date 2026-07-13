@@ -122,8 +122,8 @@ keymap("t", "<ESC>", "<C-\\><C-n>", opts)
 --[[ keymap("n", "<leader>pp", ":vim ~/apps/home/labrecqb<cr>", opts) ]]
 
 -- Telescope -- files
--- keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>ff", ":FzfLua files<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+-- keymap("n", "<leader>p", ":FzfLua files<cr>", opts)
 keymap("n", "<leader>fk", ":lua require('telescope.builtin').find_files({cwd='~/Writing/knowledge'})<cr>", opts)
 keymap(
   "n",
@@ -160,14 +160,6 @@ keymap(
 -- keymap("n", "<leader>w", ":lua require('telescope.builtin').buffers({})<cr>", opts)
 keymap("n", "<leader>w", ":FzfLua buffers<cr>", opts)
 keymap("n", "<leader>s", ":lua require('telescope.builtin').lsp_document_symbols({})<cr>", opts)
-
--- Telescope -- projects
-keymap(
-  "n",
-  "<leader>p",
-  ":lua require('telescope').extensions.projects.projects({noremap=true, silent=true})<cr>",
-  opts
-)
 
 -- NetRW
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
