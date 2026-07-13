@@ -6,7 +6,7 @@ return {
   -- dependencies = { "nvim-mini/mini.icons" },
   opts = {
     files = {
-      formatter = "path.filename_first",
+      -- formatter = "path.filename_first",
       cmd = [[
           fd -e py
           fd -t f -E '*.py'
