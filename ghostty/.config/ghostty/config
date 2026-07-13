@@ -7,9 +7,11 @@ font-family = "Menlo"
 # background = 282c34
 # foreground = ffffff
 # theme = Adwaita
-theme = TokyoNight Moon
+# theme = TokyoNight Moon
+theme = TokyoNight Day
 
 cursor-style-blink = false
 
 # -i uses interactive shell, so .zshrc is sourced
-initial-command = /bin/zsh --login -c -i "/Users/benjaminlabrecque/apps/home/labrecqb/dotfiles/tmux-launch.sh"
+# initial-command = /bin/zsh --login -c -i "/Users/benjaminlabrecque/apps/home/labrecqb/dotfiles/tmux-launch.sh"
+initial-command = /bin/bash --login -c -i "/home/labrec_b/apps/home/labrecqb/dotfiles/tmux-launch.sh"

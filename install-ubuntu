@@ -8,6 +8,7 @@ mv ~/.gitconfig ~/.gitconfig.bak
 
 stow shell-base --target=${HOME}
 stow bash --target=${HOME}
+stow ghostty --target=${HOME}
 
 stow nvim --target=${HOME}
 stow tmux --target=${HOME}

@@ -176,3 +176,8 @@ case ":$PATH:" in
 esac
 
 # <<< juliaup initialize <<<
+
+alias ag="cd ${WORKSPACE}/hla_framework_bd/packages/agebd"
+
+export PATH="/home/labrec_b/.pixi/bin:$PATH"
+. "$HOME/.cargo/env"
