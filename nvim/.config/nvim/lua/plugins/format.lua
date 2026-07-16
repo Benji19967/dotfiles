@@ -7,7 +7,7 @@ return {
       lua = { "stylua" },
       -- Conform will run multiple formatters sequentially
       python = { "ruff_organize_imports", "ruff_format" },
-      yaml = { "yamlfmt" },
+      -- yaml = { "yamlfmt" },
     },
     format_on_save = {
       -- These options will be passed to conform.format()

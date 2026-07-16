@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -179,3 +179,28 @@ keymap("n", "<leader>j", "<cmd>HopWord<cr>", opts)
 
 -- '*' stay on current word instead if jumping to next one
 keymap("n", "*", "*N", opts)
+
+-- Neogit
+keymap("n", "<leader>gv", "<cmd>Neogit<cr>", opts)
+
+-- GrugFar
+keymap("n", "<leader>h", function()
+  require("grug-far").open({
+    prefills = {
+      paths = vim.fn.expand("%"),
+    },
+  })
+end, opts)
+keymap("n", "<leader>H", function()
+  require("grug-far").open({})
+end, opts)
+keymap("v", "<leader>h", function()
+  require("grug-far").with_visual_selection({
+    prefills = {
+      paths = vim.fn.expand("%"),
+    },
+  })
+end, opts)
+keymap("v", "<leader>H", function()
+  require("grug-far").with_visual_selection({})
+end, opts)
