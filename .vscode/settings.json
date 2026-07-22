@@ -1,0 +1,22 @@
+{
+    "git.openRepositoryInParentFolders": "never",
+    "remote.SSH.connectTimeout": 60,
+    # TODO: expand $HOME
+    "remote.SSH.configFile": "$HOME/labrec_b/.ssh/config",
+    "remote.SSH.serverInstallPath": {
+        # TODO: path
+        "sls-lc": ".../.vscode-server"
+    },
+    "python.analysis.typeCheckingMode": "standard",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit",
+            "source.fixAll": "explicit",
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "workbench.editor.showTabs": "single",
+    "workbench.colorTheme": "Solarized Light+",
+    "editor.selectionClipboard": false, // enable multi-line cursor using middle-click
+}
