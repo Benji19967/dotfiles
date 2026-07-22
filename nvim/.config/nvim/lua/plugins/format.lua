@@ -6,7 +6,7 @@ return {
     formatters_by_ft = {
       lua = { "stylua" },
       -- Conform will run multiple formatters sequentially
-      python = { "ruff_organize_imports", "ruff_format" },
+      python = { "ruff_fix", "ruff_format" },
       -- yaml = { "yamlfmt" },
     },
     format_on_save = {
