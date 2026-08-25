@@ -184,23 +184,38 @@ keymap("n", "*", "*N", opts)
 keymap("n", "<leader>gv", "<cmd>Neogit<cr>", opts)
 
 -- GrugFar
+-- rg skips hidden dirs, so .github/.gitea are invisible by default. --hidden
+-- brings them in (--glob alone can't override the hidden filter, and an
+-- inclusive --glob would restrict the search to only those dirs).
+local grug_flags = "--hidden --glob=!.git/"
+
 keymap("n", "<leader>h", function()
   require("grug-far").open({
     prefills = {
       paths = vim.fn.expand("%"),
+      flags = grug_flags,
     },
   })
 end, opts)
 keymap("n", "<leader>H", function()
-  require("grug-far").open({})
+  require("grug-far").open({
+    prefills = {
+      flags = grug_flags,
+    },
+  })
 end, opts)
 keymap("v", "<leader>h", function()
   require("grug-far").with_visual_selection({
     prefills = {
       paths = vim.fn.expand("%"),
+      flags = grug_flags,
     },
   })
 end, opts)
 keymap("v", "<leader>H", function()
-  require("grug-far").with_visual_selection({})
+  require("grug-far").with_visual_selection({
+    prefills = {
+      flags = grug_flags,
+    },
+  })
 end, opts)
