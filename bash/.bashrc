@@ -178,6 +178,13 @@ esac
 # <<< juliaup initialize <<<
 
 alias ag="cd ${WORKSPACE}/hla_framework_bd/packages/agebd"
+alias hla="cd ${WORKSPACE}/hla_framework_bd"
+
+function app()
+{
+    service="$1"
+    cd "${WORKSPACE}/hla_framework_bd/services/${service}/current/app"
+}
 
 export PATH="/home/labrec_b/.pixi/bin:$PATH"
 . "$HOME/.cargo/env"
