@@ -9,6 +9,7 @@ return {
       -- python = { "ruff_fix", "ruff_format" },
       python = { "ruff_organize_imports", "ruff_format" },
       -- yaml = { "yamlfmt" },
+      sql = { "pg_format" },
     },
     format_on_save = {
       -- These options will be passed to conform.format()

@@ -21,7 +21,8 @@ return {
         "jdtls", -- java
         "bash-language-server",
         "shellcheck", -- bash
-        "dexter", -- elixir
+        "elixirls", -- elixir
+        "pgformatter", -- postgres
       },
     },
     dependencies = {
