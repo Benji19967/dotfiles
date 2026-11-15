@@ -34,7 +34,10 @@ tmux = "latest"             # prebuilt tmux-builds
 shellcheck = "latest"
 
 # --- languages / build -------------------------------------------------------
-node = "lts"                # pyright & other mason LSPs
+# node: pyright & other mason LSPs. Upstream linux binaries (node >= 23) need
+# libatomic.so.1, missing on minimal RHEL/Rocky -> conda-forge build there.
+node = { version = "lts", os = ["macos"] }
+"conda:nodejs" = { version = "latest", os = ["linux"] }
 uv = "latest"               # python: `uv python install 3.12` (replaces pyenv)
 make = "latest"             # conda:make
 cmake = "latest"
