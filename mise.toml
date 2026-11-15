@@ -1,0 +1,35 @@
+# Bootstrap project for this repo: `mise bootstrap` (or ./bootstrap) applies it.
+#
+# Replaces the stow packages: each entry symlinks a target in $HOME to a file
+# or directory in this repo (sources are relative to this file). Configs are
+# tiny symlinks, so they stay in $HOME even when it is small; heavy data goes
+# to $DOT_ROOT via the XDG/MISE env vars in shell-base 10_env.sh.
+#
+# Tools are NOT declared here (that would scope them to this directory): they
+# live in mise-global/config.toml, deployed below as the global mise config.
+
+[dotfiles]
+# mise's own global config first (mise re-reads it, then installs its [tools])
+"~/.config/mise/config.toml" = { source = "mise-global/config.toml" }
+
+# --- every machine -----------------------------------------------------------
+"~/.config/shell" = { source = "shell-base/.config/shell" }
+"~/.config/nvim" = { source = "nvim/.config/nvim" }
+"~/.config/ghostty" = { source = "ghostty/.config/ghostty" }
+"~/.tmux.conf" = { source = "tmux/.tmux.conf" }
+"~/.gitconfig" = { source = "git/.gitconfig" }
+"~/.clang-format" = { source = "clang/.clang-format" }
+# per file: ~/.local/bin also holds mise itself and other installs
+"~/.local/bin" = { source = "bin", mode = "symlink-each" }
+
+# --- linux: bash -------------------------------------------------------------
+"~/.bashrc" = { source = "bash/.bashrc", variants = [{ os = "linux" }] }
+"~/.bash_profile" = { source = "bash/.bash_profile", variants = [{ os = "linux" }] }
+"~/.bashrc.d" = { source = "bash/.bashrc.d", variants = [{ os = "linux" }] }
+
+# --- macos: zsh + GUI --------------------------------------------------------
+"~/.zshrc" = { source = "zsh/.zshrc", variants = [{ os = "macos" }] }
+"~/.zprofile" = { source = "zsh/.zprofile", variants = [{ os = "macos" }] }
+"~/.zshrc.d" = { source = "zsh/.zshrc.d", variants = [{ os = "macos" }] }
+"~/.alacritty.toml" = { source = "alacritty/.alacritty.toml", variants = [{ os = "macos" }] }
+"~/.config/aerospace/aerospace.toml" = { source = "aerospace/aerospace.toml", variants = [{ os = "macos" }] }

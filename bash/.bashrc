@@ -154,13 +154,10 @@ fi
 #   exec ${HOME}/tmux/tmux
 # fi
 
-# Fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# Pyenv
+# Pyenv (optional: uv from mise covers python versions now)
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - bash)"
+command -v pyenv >/dev/null && eval "$(pyenv init - bash)"
 
 # >>> juliaup initialize >>>
 
@@ -186,5 +183,16 @@ function app()
     cd "${WORKSPACE}/hla_framework_bd/services/${service}/current/app"
 }
 
-export PATH="/home/labrec_b/.pixi/bin:$PATH"
-. "$HOME/.cargo/env"
+# Pixi (per-project use only; global tools come from mise)
+[ -d "$HOME/.pixi/bin" ] && export PATH="$HOME/.pixi/bin:$PATH"
+
+# mise: global tools from ~/.config/mise/config.toml, last so they win.
+# Binary is in ~/.local/bin or $DOT_ROOT/.local/bin (PATH set in ~/.config/shell/30_paths.sh).
+command -v mise >/dev/null && eval "$(mise activate bash)"
+
+# Fzf: keybindings + completion (legacy ~/.fzf install, else fzf >= 0.48 from mise)
+if [ -f ~/.fzf.bash ]; then
+  source ~/.fzf.bash
+elif command -v fzf >/dev/null; then
+  eval "$(fzf --bash)"
+fi

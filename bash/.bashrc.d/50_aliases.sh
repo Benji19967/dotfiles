@@ -4,8 +4,8 @@ alias src="source ~/.bashrc"
 alias rca="vim ~/.bash_aliases"
 alias rcp="vim ~/.bash_profile"
 
-# Neovim (ubuntu install)
-alias vim="~/neovim/build/bin/nvim"
+# Neovim (from mise, on PATH)
+alias vim="nvim"
 
 ## Paths - ROS
 PROFAB_WORKSPACE=$HOME/profab_ws

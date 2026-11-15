@@ -31,9 +31,6 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 
-# Fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Source shell-base files
 BASE_SHELL_CONFIG_DIR="$HOME/.config/shell"
 if [[ -d "$BASE_SHELL_CONFIG_DIR" ]]; then
@@ -62,4 +59,16 @@ export PATH
 
 # <<< juliaup initialize <<<
 
-export PATH="/Users/benjaminlabrecque/.pixi/bin:$PATH"
+# Pixi (per-project use only; global tools come from mise)
+[ -d "$HOME/.pixi/bin" ] && export PATH="$HOME/.pixi/bin:$PATH"
+
+# mise: global tools from ~/.config/mise/config.toml, last so they win.
+# Binary is in ~/.local/bin or $DOT_ROOT/.local/bin (PATH set in ~/.config/shell/30_paths.sh).
+command -v mise >/dev/null && eval "$(mise activate zsh)"
+
+# Fzf: keybindings + completion (legacy ~/.fzf install, else fzf >= 0.48 from mise)
+if [[ -f ~/.fzf.zsh ]]; then
+  source ~/.fzf.zsh
+elif command -v fzf >/dev/null; then
+  source <(fzf --zsh)
+fi

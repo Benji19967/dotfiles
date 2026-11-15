@@ -1,0 +1,50 @@
+# Global tools, active in every directory.
+# Deployed to ~/.config/mise/config.toml by the [dotfiles] table in ../mise.toml.
+#
+# Backends:
+#   default / aqua: upstream release binaries (static Go/Rust tools, no deps)
+#   conda:          conda-forge builds, for tools without portable upstream
+#                   binaries (C tools with lib deps, or no macOS release)
+# Nothing here needs sudo. Installs go to $MISE_DATA_DIR (= $XDG_DATA_HOME/mise),
+# which moves to $DOT_ROOT on small-home machines (see shell-base 10_env.sh).
+#
+# Add a tool:  mise use -g <tool>   (edits this file through the symlink -> commit)
+
+[tools]
+# --- core CLI ----------------------------------------------------------------
+"conda:git" = "latest"
+gh = "latest"
+delta = "latest"
+lazygit = "latest"
+fzf = "latest"
+ripgrep = "latest"
+fd = "latest"
+"conda:eza" = "latest"      # upstream ships no macOS binary
+bat = "latest"
+zoxide = "latest"
+jq = "latest"
+"conda:htop" = "latest"
+tealdeer = "latest"
+"conda:unzip" = "latest"    # mason needs it
+
+# --- editor / terminal -------------------------------------------------------
+"aqua:neovim/neovim" = "latest"
+tree-sitter = "latest"      # nvim-treesitter (main branch) needs the CLI
+tmux = "latest"             # prebuilt tmux-builds
+shellcheck = "latest"
+
+# --- languages / build -------------------------------------------------------
+node = "lts"                # pyright & other mason LSPs
+uv = "latest"               # python: `uv python install 3.12` (replaces pyenv)
+make = "latest"             # conda:make
+cmake = "latest"
+
+# --- optional ----------------------------------------------------------------
+# "conda:erlang" = "latest"   # prebuilt; core:erlang compiles from source
+# "conda:elixir" = "latest"
+# postgres = "latest"         # conda:postgresql
+# "conda:xclip" = { version = "latest", os = ["linux"] }
+
+[settings]
+# Don't prompt on first use of a tool on a new machine.
+yes = true
