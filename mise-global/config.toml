@@ -29,7 +29,10 @@ tealdeer = "latest"
 
 # --- editor / terminal -------------------------------------------------------
 "aqua:neovim/neovim" = "latest"
-tree-sitter = "latest"      # nvim-treesitter (main branch) needs the CLI
+# nvim-treesitter (main branch) needs the CLI. Upstream linux binary needs
+# glibc >= 2.39 (Rocky 9 has 2.34) -> conda-forge build there.
+tree-sitter = { version = "latest", os = ["macos"] }
+"conda:tree-sitter-cli" = { version = "latest", os = ["linux"] }
 tmux = "latest"             # prebuilt tmux-builds
 shellcheck = "latest"
 
