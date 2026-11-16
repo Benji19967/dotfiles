@@ -10,6 +10,12 @@ https://github.com/parkr/dotfiles/blob/a9c603e2e5d300c5b3d4fdb50b6874db6e85a2c6/
 - Using bash/zshrc.d:
 - Using 10_<>.sh to manage order of sourcing
 
+## Dotfiles setup
+
+```
+mise dot apply
+```
+
 ## New machine (any OS, no sudo)
 
 ```bash
