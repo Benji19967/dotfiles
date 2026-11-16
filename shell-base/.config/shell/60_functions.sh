@@ -56,9 +56,9 @@ function p()
 function fzf_open_project() 
 {
     # local dir=$(ls -1 | fzf);
-    local dir_stem=$(ls -1 ${WORKSPACE} | fzf)
+    local dir_stem=$(command ls -1 "${WORKSPACE}" | fzf)
     local dir=${WORKSPACE}/${dir_stem}
-    if [[ -n "$dir" ]]; then
+    if [[ -n "$dir_stem" ]]; then
         cd "$dir"
         nvim .
     fi
@@ -67,10 +67,10 @@ function fzf_open_project()
 function fzf_add_project_as_tmux_session() 
 {
     # local dir=$(ls -1 | fzf);
-    local dir_stem=$(ls -1 ${WORKSPACE} | fzf)
+    local dir_stem=$(command ls -1 "${WORKSPACE}" | fzf)
     local dir=${WORKSPACE}/${dir_stem}
-    if [[ -n "$dir" ]]; then
-        source ${WORKSPACE}/dotfiles/tmux-start-session.sh
+    if [[ -n "$dir_stem" ]]; then
+        source ${WORKSPACE}/dotfiles/bin/tmux-start-session.sh
         tmux_start_session ${dir_stem}
         tmux switch-client -t ${dir_stem}
     fi

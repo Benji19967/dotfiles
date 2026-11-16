@@ -45,6 +45,7 @@ shellcheck = "latest"
 node = { version = "lts", os = ["macos"] }
 "conda:nodejs" = { version = "latest", os = ["linux"] }
 uv = "latest"               # python: `uv python install 3.12` (replaces pyenv)
+pixi = "latest"
 make = "latest"             # conda:make
 cmake = "latest"
 hyperfine = "latest"
