@@ -33,4 +33,7 @@ Everything is driven by [mise](https://mise.jdx.dev) (`./bootstrap` installs it 
 - `mise-global/config.toml`: global `[tools]`, deployed as `~/.config/mise/config.toml`.
   Add one with `mise use -g <tool>` and commit the diff; elsewhere run `mise bootstrap` (or `mise install`).
   Static CLIs come from upstream releases, C tools (git, htop, unzip, make) from conda-forge (`conda:`).
+- `mise.toml` also holds the bootstrap steps: a `pre-dotfiles` hook backs up real files a symlink
+  would replace (to `~/.dotfiles-backup/`), and the `bootstrap` task installs nvim plugins and python.
+  `./bootstrap` itself only sets `DOT_ROOT` and installs mise.
 - Machine-local settings (`DOT_ROOT`, overrides) live in the untracked `~/.dotfiles.env`.

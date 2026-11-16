@@ -32,3 +32,39 @@
 "~/.zprofile" = { source = "zsh/.zprofile", variants = [{ os = "macos" }] }
 "~/.zshrc.d" = { source = "zsh/.zshrc.d", variants = [{ os = "macos" }] }
 "~/.config/aerospace/aerospace.toml" = { source = "aerospace/aerospace.toml", variants = [{ os = "macos" }] }
+
+# --- bootstrap steps ---------------------------------------------------------
+# Hooks and the bootstrap task run on every `mise bootstrap`: keep them
+# idempotent. Hooks run under `sh` (dash on Ubuntu): POSIX only, no bashisms.
+# Shell activation stays in zsh/.zshrc and bash/.bashrc: those are symlinks
+# into this repo, so [bootstrap.mise_shell_activate] would edit tracked files.
+
+# A symlink entry never replaces a real file (and --force-dotfiles keeps no
+# copy of an untracked one), so move such files aside first.
+[bootstrap.hooks.pre-dotfiles]
+description = "back up real files that a dotfile symlink would replace"
+run = '''
+cd "{{ config_root }}"
+backup="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
+mise dotfiles diff 2>/dev/null | sed -n 's/^  current: \(.*\) exists$/\1/p' |
+while IFS= read -r t; do
+  # shellcheck disable=SC2088 # mise prints a literal "~/"
+  case "$t" in "~/"*) p="$HOME/${t#"~/"}" ;; *) p="$t" ;; esac
+  if [ -L "$p" ] || [ ! -e "$p" ]; then continue; fi
+  rel="${p#"$HOME"/}"
+  mkdir -p "$backup/$(dirname "$rel")"
+  mv "$p" "$backup/$rel"
+  echo "backed up $p -> $backup/$rel" >&2
+done
+'''
+
+# Runs after [tools] are installed, with them on PATH.
+[tasks.bootstrap]
+description = "install nvim plugins (from lazy-lock.json) and python"
+run = [
+  'nvim --headless "+Lazy! restore" +qa',   # into $XDG_DATA_HOME
+  "uv python install 3.12",                 # replaces pyenv
+]
+
+[bootstrap.hooks.final]
+run = "echo 'Done. Open a new shell: exec $SHELL -l'"
