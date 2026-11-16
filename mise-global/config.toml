@@ -80,14 +80,14 @@ neo4j = "latest"
 # postgres = "latest"         # conda:postgresql
 # "conda:xclip" = { version = "latest", os = ["linux"] }
 
-# --- brew --------------------------------------------------------------------
+# --- brew (macOS only: Linux machines often have no brew and no sudo) --------
 [bootstrap.packages]
-"brew:unar" = "latest"
-"brew:coreutils" = "latest"   # g-prefixed; conda:coreutils would shadow BSD ls/date/...
-"brew:nmap" = "latest"
-"brew-cask:font-meslo-lg-nerd-font" = "latest"
-"brew-cask:ghostty" = "latest"
-"brew-cask:nikitabobko/tap/aerospace" = "latest"
+"brew:unar" = { version = "latest", os = ["macos"] }
+"brew:coreutils" = { version = "latest", os = ["macos"] }   # g-prefixed; conda:coreutils would shadow BSD ls/date/...
+"brew:nmap" = { version = "latest", os = ["macos"] }
+"brew-cask:font-meslo-lg-nerd-font" = { version = "latest", os = ["macos"] }
+"brew-cask:ghostty" = { version = "latest", os = ["macos"] }
+"brew-cask:nikitabobko/tap/aerospace" = { version = "latest", os = ["macos"] }
 
 [settings]
 # Don't prompt on first use of a tool on a new machine.
