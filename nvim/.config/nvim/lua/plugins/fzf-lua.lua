@@ -12,6 +12,12 @@ return {
   "ibhagwan/fzf-lua",
   -- optional for icon support
   dependencies = { "nvim-tree/nvim-web-devicons" },
+  init = function()
+    -- fzf-lua's own socket ("fzf-lua.<os.time()>") under macOS $TMPDIR exceeds the
+    -- 103-char sun_path limit -> serverstart() fails with "invalid argument".
+    -- Reuse nvim's default server, which has a shorter path.
+    vim.g.fzf_lua_server = vim.v.servername ~= "" and vim.v.servername or vim.fn.serverstart()
+  end,
   -- or if using mini.icons/mini.nvim
   -- dependencies = { "nvim-mini/mini.icons" },
   opts = {
