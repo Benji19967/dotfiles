@@ -26,6 +26,9 @@ jq = "latest"
 "conda:htop" = "latest"
 tealdeer = "latest"
 "conda:unzip" = "latest"    # mason needs it
+"conda:wget" = "latest"
+"conda:rsync" = "latest"
+"conda:nnn" = "latest"
 
 # --- editor / terminal -------------------------------------------------------
 "aqua:neovim/neovim" = "latest"
@@ -44,12 +47,46 @@ node = { version = "lts", os = ["macos"] }
 uv = "latest"               # python: `uv python install 3.12` (replaces pyenv)
 make = "latest"             # conda:make
 cmake = "latest"
+hyperfine = "latest"
+dust = "latest"
+yarn = "1"                  # classic, matches old brew yarn
+java = "temurin-21"
+maven = "latest"
+"conda:pkg-config" = "latest"
+"conda:erlang" = "latest"   # prebuilt; core:erlang compiles from source
+"conda:elixir" = "latest"
+julia = "latest"
+ruby = "3.1"
+
+# --- dev tools ---------------------------------------------------------------
+stylua = "latest"
+ast-grep = "latest"
+nushell = "latest"
+git-lfs = "latest"
+dbmate = "latest"           # DB migrations
+"conda:redis-server" = "latest"
+neo4j = "latest"
+
+# --- media / docs (decker, image rendering in nvim) --------------------------
+"conda:imagemagick" = "latest"
+"conda:ghostscript" = "latest"
+"conda:chafa" = "latest"
+"conda:gnuplot" = "latest"
+"conda:pdf2svg" = "latest"
+"conda:graphviz" = "latest"
 
 # --- optional ----------------------------------------------------------------
-# "conda:erlang" = "latest"   # prebuilt; core:erlang compiles from source
-# "conda:elixir" = "latest"
 # postgres = "latest"         # conda:postgresql
 # "conda:xclip" = { version = "latest", os = ["linux"] }
+
+# --- brew --------------------------------------------------------------------
+[bootstrap.packages]
+"brew:unar" = "latest"
+"brew:coreutils" = "latest"   # g-prefixed; conda:coreutils would shadow BSD ls/date/...
+"brew:nmap" = "latest"
+"brew-cask:font-meslo-lg-nerd-font" = "latest"
+"brew-cask:ghostty" = "latest"
+"brew-cask:nikitabobko/tap/aerospace" = "latest"
 
 [settings]
 # Don't prompt on first use of a tool on a new machine.
