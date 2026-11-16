@@ -76,4 +76,5 @@ log "$(mise --version)"
 
 cd "$DOTFILES"
 mise trust "$DOTFILES/mise.toml" >/dev/null
+brew trust nikitabobko/tap
 exec mise bootstrap --yes ${MISE_ARGS[@]+"${MISE_ARGS[@]}"}
