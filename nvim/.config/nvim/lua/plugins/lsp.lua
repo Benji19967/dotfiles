@@ -23,6 +23,7 @@ return {
         "shellcheck", -- bash
         "elixirls", -- elixir
         "pgformatter", -- postgres
+        "cypher_ls", -- cypher
       },
     },
     dependencies = {
